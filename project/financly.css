@@ -1,0 +1,52 @@
+header{
+  margin-top: 250px;
+}
+
+.divider{
+    width:1280px;
+    height:auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.header {
+    display: inline-block;
+    float: left;
+    font-family: 'Amita', cursive;
+
+}
+
+
+.slide{
+  position: middle;
+  margin: 0px auto; // center
+  width:1000px; 
+  height:1000px; 
+  text-align: bottom; 
+}
+
+
+.container {
+    position: relative;
+    text-align: center;
+    color: black;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, 50%);
+}
+
+.row{
+  font color: black;
+}
+
+.button1{
+  margin: auto; // center
+  width:100px;  
+  padding: 20px 140px;
+  
+}
+
+
