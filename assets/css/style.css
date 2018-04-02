@@ -1,4 +1,5 @@
-body {
+a {
+    cursor: pointer;
 }
 
 .container-fluid {
@@ -6,6 +7,11 @@ body {
     height: 100%;
     width: 100%;
     position: absolute;
+}
+
+
+[class*="col-"] {
+    margin: auto;
 }
 
 .logo {
@@ -17,10 +23,6 @@ body {
     text-decoration: none !important;
 }
 
-[class*="col-"] {
-    margin: auto;
-}
-
 .login-box {
     margin: 5% auto;
     width: 45%;
@@ -29,11 +31,10 @@ body {
     border-radius: 3px;
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
     position: absolute;
-    top:0;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-
     margin: auto;
 }
 
@@ -58,7 +59,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
-    
+
 }
 
 .signin-box {
@@ -136,7 +137,8 @@ input[type="password"]:focus {
 
 input[type="submit"] {
     margin-top: 7%;
-    width: 56%;
+    padding: 4%;
+    width: 100%;
     height: 11%;
     background: darkorange;
     border: none;
@@ -178,13 +180,14 @@ input[type="submit"]:active {
     top: 0;
     right: 0;
     box-sizing: border-box;
-    padding: 5%;
+    padding: 6%;
+    padding-top: 8%;
     border-radius: 0 2px 2px 0;
 }
 
 button.social-signin {
-    margin-bottom: 20px;
-    width: 220px;
+    margin-bottom: 8%;
+    width: 100%;
     height: 36px;
     border: none;
     border-radius: 2px;
@@ -218,7 +221,18 @@ button.social-signin.google {
     background: #DD4B39;
 }
 
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 1420px) {
+
+    .login-box {
+        width: 75%;
+        height: 70%;
+        overflow: auto;
+    }
+}
+
+
+@media screen and (max-width: 680px) {
 
     .container-fluid {
         border: 10px solid black;
@@ -239,18 +253,20 @@ button.social-signin.google {
         padding: 0;
         display: block;
     }
-    
-    
-input[type="text"],
-    input[type="password"]{
-        width: 100%;
+
+
+    input[type="text"],
+    input[type="password"] {
+        width: 92%;
         height: 9%;
-        font-size: 15px
+        padding: 4%;
+        font-size: 13px;
+        margin: auto;
     }
-    h1{
+    h1 {
         font-size: 25px;
     }
-    .or{
+    .or {
         font-size: 14px;
         margin-top: 12px;
         margin-bottom: 12px;
