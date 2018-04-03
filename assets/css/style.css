@@ -2,13 +2,56 @@ a {
     cursor: pointer;
 }
 
-.container-fluid {
-    border: 15px solid black;
-    height: 100%;
-    width: 100%;
-    position: absolute;
+#top,
+#bottom,
+#left,
+#right {
+    background: black;
+    border: none;
+    position: fixed;
+    z-index: 999;
 }
 
+#left,
+#right {
+    top: 0;
+    bottom: 0;
+    width: 15px;
+}
+
+#left {
+    left: 0;
+}
+
+#right {
+    right: 0;
+}
+
+#top,
+#bottom {
+    left: 0;
+    right: 0;
+    height: 15px;
+}
+
+#top {
+    top: 0;
+}
+
+#bottom {
+    bottom: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.container-fluid {
+    height: 2000px;
+    width: 100%;
+    padding: 15px;
+}
 
 [class*="col-"] {
     margin: auto;
@@ -21,6 +64,43 @@ a {
     color: black !important;
     word-break: break-word;
     text-decoration: none !important;
+}
+
+.dot{
+    color: orange;
+    display: inline;
+    font-size: 70px;
+    line-height: 0;
+    font-family: 'Lato', 'sans-serif';
+}
+
+.second > [class*="col-"] {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.second{
+    overflow: hidden;
+    position: relative;
+        height: 100%;
+
+}
+
+.circle {
+    height: 32%;
+    border-radius: 50%;
+    left: 63% !important;
+background: linear-gradient(135deg,  rgba(255,174,39,1) 0%,rgba(222,73,109,1) 100%);
+    margin-top: 12%;
+    position: absolute;
+  overflow: hidden;
+}
+
+.jumbo {
+    margin-top: 12px;
+    font-family: 'Montserrat Subrayada', 'sans-serif';
+    font-size: 75px;
+    padding-left: 40px;
 }
 
 .login-box {
@@ -136,7 +216,7 @@ input[type="password"]:focus {
 }
 
 input[type="submit"] {
-    margin-top: 7%;
+    margin-top: 8%;
     padding: 4%;
     width: 100%;
     height: 11%;
@@ -226,34 +306,76 @@ button.social-signin.google {
 
     .login-box {
         width: 75%;
-        height: 70%;
+        height: 65%;
         overflow: auto;
+    }
+    .jumbo{
+        font-size: 60px;
+    }
+    
+#top,
+    #bottom{
+        height: 12px;
+    }
+    #left,#right{
+        width: 12px;
+    }
+    
+    .circle{
+        height: 27%;
     }
 }
 
+@media screen and (max-width: 1080px) {
+    
+    .jumbo{
+        font-size: 47px;
+        height: 70%;
+        text-align: center;
+        padding-left: 0;
+    }
+    .dot{
+        color: white;
+    }
+    .circle{
+        display: none;
+    }
+    .container-fluid{
+background: linear-gradient(135deg,  rgba(255,174,39,1) 0%,rgba(222,73,109,1) 100%); }
+    
+}
 
 @media screen and (max-width: 680px) {
 
-    .container-fluid {
-        border: 10px solid black;
+#top,
+    #bottom{
+        height: 10px;
+    }
+    #left,#right{
+        width: 10px;
     }
     .logo {
         font-size: 38px;
     }
+    .dot{
+        font-size: 60px;
+    }
     .sign {
         font-size: 15px;
-        padding: 17px 11px 0px 0px;
+        padding: 20px 11px 0px 0px;
     }
     .login-box {
         width: 75%;
-        height: 80%;
+        height: 70%;
         overflow: auto;
         text-align: center;
         margin: auto;
         padding: 0;
         display: block;
     }
-
+.jumbo{
+        font-size: 50px;
+    }
 
     input[type="text"],
     input[type="password"] {
@@ -265,25 +387,67 @@ button.social-signin.google {
     }
     h1 {
         font-size: 25px;
+        margin-top: 3%;
     }
     .or {
         font-size: 14px;
         margin-top: 12px;
         margin-bottom: 12px;
     }
+
+    button.social-signin,
+    input[type="submit"] {
+        width: 85%;
+        padding: 2%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .container-fluid{
+        padding-left: 22px;
+        padding-right: 22px;
+    }
 }
 
 @media screen and (max-width: 480px) {
 
-    .container-fluid {
-        border: 10px solid black;
-    }
+   
     .logo {
         font-size: 30px;
         padding-right: 5px;
     }
     .sign {
         font-size: 14px;
-        padding: 12px 9px 0px 0px;
+        padding: 15px 9px 0px 0px;
+    }
+    
+    .jumbo{
+        font-size: 35px;
+    }
+    
+    .dot{
+        font-size: 45px;
+    }
+    button.social-signin,
+    input[type="submit"] {
+        width: 90%;
+
+    }
+}
+
+
+@media screen and (max-width: 360px) {
+    .logo {
+        font-size: 28px;
+        padding-right: 6px;
+        margin: 0;
+    }
+    .sign {
+        font-size: 13px;
+        padding: 15px 9px 0px 0px;
+    }
+  
+    .jumbo{
+        font-size: 28px;
     }
 }
