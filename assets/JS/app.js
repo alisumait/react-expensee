@@ -30,11 +30,10 @@ function handleSignUp() {
 
       // Sign in with email and pass.
       // [START createwithemail]
-      firebase.auth().createUserWithEmailAndPassword(email, password).then(function){
+      firebase.auth().createUserWithEmailAndPassword(email, password).then(function() {
 
 			alert("suceess");
-      }
-      .catch(function(error) {
+      }),function(error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -46,7 +45,7 @@ function handleSignUp() {
         }
         console.log(error);
         // [END_EXCLUDE]
-      });
+      };
       // [END createwithemail]
     }
    
