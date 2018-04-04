@@ -66,7 +66,7 @@ body {
     text-decoration: none !important;
 }
 
-.dot{
+.dot {
     color: orange;
     display: inline;
     font-size: 70px;
@@ -79,10 +79,10 @@ body {
     margin-right: 0;
 }
 
-.second{
+.second {
     overflow: hidden;
     position: relative;
-        height: 100%;
+    height: 100%;
 
 }
 
@@ -90,10 +90,10 @@ body {
     height: 32%;
     border-radius: 50%;
     left: 63% !important;
-background: linear-gradient(135deg,  rgba(255,174,39,1) 0%,rgba(222,73,109,1) 100%);
+    background: linear-gradient(135deg, rgba(255, 174, 39, 1) 0%, rgba(222, 73, 109, 1) 100%);
     margin-top: 12%;
     position: absolute;
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .jumbo {
@@ -309,55 +309,71 @@ button.social-signin.google {
         height: 65%;
         overflow: auto;
     }
-    .jumbo{
+    .jumbo {
         font-size: 60px;
     }
-    
-#top,
-    #bottom{
+
+    #top,
+    #bottom {
         height: 12px;
     }
-    #left,#right{
+    #left,
+    #right {
         width: 12px;
     }
-    
-    .circle{
+
+    .circle {
         height: 27%;
+        left: 69% !important;
+
     }
 }
 
 @media screen and (max-width: 1080px) {
-    
-    .jumbo{
-        font-size: 47px;
+
+    .jumbo {
+        font-size: 57px;
+    }
+    .circle {
+        height: 21%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    .jumbo {
+        font-size: 43px;
         height: 70%;
         text-align: center;
         padding-left: 0;
     }
-    .dot{
+    .dot {
         color: white;
     }
-    .circle{
+    .circle {
         display: none;
+        max-width: 0px !important;
     }
-    .container-fluid{
-background: linear-gradient(135deg,  rgba(255,174,39,1) 0%,rgba(222,73,109,1) 100%); }
-    
+    .container-fluid {
+        background: linear-gradient(135deg, rgba(255, 174, 39, 1) 0%, rgba(222, 73, 109, 1) 100%);
+    }
+
 }
 
 @media screen and (max-width: 680px) {
 
-#top,
-    #bottom{
+    #top,
+    #bottom {
         height: 10px;
     }
-    #left,#right{
+    #left,
+    #right {
         width: 10px;
     }
     .logo {
         font-size: 38px;
     }
-    .dot{
+    .dot {
         font-size: 60px;
     }
     .sign {
@@ -373,8 +389,8 @@ background: linear-gradient(135deg,  rgba(255,174,39,1) 0%,rgba(222,73,109,1) 10
         padding: 0;
         display: block;
     }
-.jumbo{
-        font-size: 50px;
+    .jumbo {
+        font-size: 40px;
     }
 
     input[type="text"],
@@ -403,7 +419,7 @@ background: linear-gradient(135deg,  rgba(255,174,39,1) 0%,rgba(222,73,109,1) 10
 }
 
 @media screen and (max-width: 575px) {
-    .container-fluid{
+    .container-fluid {
         padding-left: 22px;
         padding-right: 22px;
     }
@@ -411,7 +427,7 @@ background: linear-gradient(135deg,  rgba(255,174,39,1) 0%,rgba(222,73,109,1) 10
 
 @media screen and (max-width: 480px) {
 
-   
+
     .logo {
         font-size: 30px;
         padding-right: 5px;
@@ -420,12 +436,12 @@ background: linear-gradient(135deg,  rgba(255,174,39,1) 0%,rgba(222,73,109,1) 10
         font-size: 14px;
         padding: 15px 9px 0px 0px;
     }
-    
-    .jumbo{
+
+    .jumbo {
         font-size: 35px;
     }
-    
-    .dot{
+
+    .dot {
         font-size: 45px;
     }
     button.social-signin,
@@ -446,8 +462,8 @@ background: linear-gradient(135deg,  rgba(255,174,39,1) 0%,rgba(222,73,109,1) 10
         font-size: 13px;
         padding: 15px 9px 0px 0px;
     }
-  
-    .jumbo{
+
+    .jumbo {
         font-size: 28px;
     }
 }
