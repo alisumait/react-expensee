@@ -9,6 +9,8 @@
     <link type="text/css" rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Cabin:500i|Montserrat+Subrayada:700|Raleway:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900,900i|Montserrat:500" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <link rel="stylesheet" type="text/javascript" href="assets/JS/app.js">
 
     <title>Expensee</title>
 </head>
@@ -29,7 +31,7 @@
                     <div class="col-md-5 col-12 left">
                         <h1>Sign up</h1>
 
-                        <input type="text" name="username" placeholder="Username" />
+                        
                         <input type="text" name="email" placeholder="E-mail" />
                         <input type="password" name="password" placeholder="Password" />
                         <input type="password" name="password2" placeholder="Retype password" />
@@ -50,6 +52,32 @@
             </div>
         </div>
 
+<div id="sign-in" class="back">
+            <div class="login-box animate">
+                <div class="row center">
+                    <div class="col-md-5 col-12 left">
+                        <h1>Sign up</h1>
+
+                        
+                        <input type="text" name="email" placeholder="E-mail" />
+                        <input type="password" name="password" placeholder="Password" />
+                        
+
+                        <input type="submit" name="signup_submit" value="Sign me up" />
+                    </div>
+                    <div class="col-md-2 col-12">
+
+                        <div class="or">OR</div>
+                    </div>
+                    <div class="col-md-5 col-12 right">
+
+                        <button class="social-signin facebook">Log in with facebook</button>
+                        <button class="social-signin twitter">Log in with Twitter</button>
+                        <button class="social-signin google">Log in with Google+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="row">
             <div class="col"></div>
@@ -58,8 +86,8 @@
                 <header>
 
                     <a class="logo" href="index.html">expensee<p class="dot">.</p></a>
-                    <a class="sign" onclick="document.getElementById('sign-wrapper').style.display='block'" style="float: right;">Sign in</a>
-                    <a class="sign" onclick="document.getElementById('signup-box').style.display='block'" style="float: right;">Join Us</a>
+                    <a class="sign" onclick="document.getElementById('sign-in').style.display='block'" style="float: right;">Sign in</a>
+                    <a class="sign" onclick="document.getElementById('sign-wrapper').style.display='block'" style="float: right;">Join Us</a>
 
                 </header>
 
@@ -87,12 +115,18 @@
 
 
     <script>
-        var signin = document.getElementById('sign-wrapper');
+        var signup = document.getElementById('sign-wrapper');
+        window.onclick = function(event) {
+            if (event.target == signup) {
+                signup.style.display = "none";
+            }
+        }   
+    var signin = document.getElementById('sign-in');
         window.onclick = function(event) {
             if (event.target == signin) {
                 signin.style.display = "none";
             }
-        }
+        }   
     </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
