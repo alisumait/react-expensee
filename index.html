@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css?family=Cabin:500i|Montserrat+Subrayada:700|Raleway:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900,900i|Montserrat:500" rel="stylesheet">
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
-    <link rel="stylesheet" type="text/javascript" href="assets/JS/app.js">
 
     <title>Expensee</title>
 </head>
@@ -32,11 +31,11 @@
                         <h1>Sign up</h1>
 
                         
-                        <input type="text" name="email" placeholder="E-mail" />
-                        <input type="password" name="password" placeholder="Password" />
-                        <input type="password" name="password2" placeholder="Retype password" />
+                        <input type="text" name="email" placeholder="E-mail" id="email" />
+                        <input type="password" name="password" placeholder="Password" id="password" />
+                        <input type="password" name="password2" placeholder="Retype password" id="repassword" />
 
-                        <input type="submit" name="signup_submit" value="Sign me up" />
+                        <input type="submit" name="signup_submit" value="Sign me up" onclick="handleSignUp()" />
                     </div>
                     <div class="col-md-2 col-12">
 
@@ -120,7 +119,10 @@
             if (event.target == signup) {
                 signup.style.display = "none";
             }
-        }   
+        } 
+        </script>
+
+        <script>
     var signin = document.getElementById('sign-in');
         window.onclick = function(event) {
             if (event.target == signin) {
@@ -131,6 +133,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="assets/boostrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/javascript" href="assets/js/app.js">
 </body>
 
 </html>
