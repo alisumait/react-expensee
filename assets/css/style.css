@@ -104,7 +104,6 @@ body {
 }
 
 .login-box {
-    margin: 5% auto;
     width: 45%;
     height: 53%;
     background: #FFF;
@@ -118,6 +117,14 @@ body {
     margin: auto;
 }
 
+.row{
+        margin: auto;
+}
+
+.center{
+    margin: auto;
+    height: 100%;
+}
 
 .sign {
     font-size: 18px;
@@ -346,6 +353,10 @@ button.social-signin.google {
         height: 70%;
         text-align: center;
         padding-left: 0;
+    }
+    input[type="submit"] {
+        padding: 2%;
+        
     }
     .dot {
         color: white;
