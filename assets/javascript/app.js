@@ -1,4 +1,4 @@
-// Initialize Firebase
+
 var config = {
     apiKey: "AIzaSyBZ0iMv0Hx9pGRLonPfJ3c4DAKZIBLoiZk",
     authDomain: "expensee-1bf50.firebaseapp.com",

@@ -9,8 +9,9 @@
     <link type="text/css" rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Cabin:500i|Montserrat+Subrayada:700|Raleway:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900,900i|Montserrat:500" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
-    <script type="text/javascript" src="assets/JS/app.js" ></script>
+
 
     <title>Expensee</title>
 </head>
@@ -31,7 +32,7 @@
                     <div class="col-md-5 col-12 left">
                         <h1>Sign up</h1>
 
-                        
+
                         <input type="text" name="email" placeholder="E-mail" id="email" />
                         <input type="password" name="password" placeholder="Password" id="password" />
                         <input type="password" name="password2" placeholder="Retype password" id="repassword" />
@@ -46,7 +47,7 @@
 
                         <button class="social-signin facebook" onclick="signinfacebook()">Log in with facebook</button>
                         <button class="social-signin twitter" onclick="signintwitter()">Log in with Twitter</button>
-                        <button class="social-signin google" onclick="signingoogle()">Log in with Google+</button>
+                        <button class="social-signin google" onclick="signingoogle()">Log in with Google</button>
                     </div>
                 </div>
             </div>
@@ -56,14 +57,14 @@
             <div class="login-box animate">
                 <div class="row center">
                     <div class="col-md-5 col-12 left">
-                        <h1>Sign up</h1>
+                        <h1>Sign in</h1>
 
-                        
-                        <input type="text" name="email" placeholder="E-mail" />
+
+                        <input type="text" name="email" placeholder="Email" />
                         <input type="password" name="password" placeholder="Password" />
-                        
 
-                        <input type="submit" name="signup_submit" value="Sign me up" />
+
+                        <input type="submit" name="signup_submit" value="Sign me in" />
                     </div>
                     <div class="col-md-2 col-12">
 
@@ -71,9 +72,9 @@
                     </div>
                     <div class="col-md-5 col-12 right">
 
-                       <button class="social-signin facebook" onclick="signinfacebook()">Log in with facebook</button>
+                        <button class="social-signin facebook" onclick="signinfacebook()">Log in with facebook</button>
                         <button class="social-signin twitter" onclick="signintwitter()">Log in with Twitter</button>
-                        <button class="social-signin google" onclick="signingoogle()">Log in with Google+</button>
+                        <button class="social-signin google" onclick="signingoogle()">Log in with Google</button>
                     </div>
                 </div>
             </div>
@@ -98,26 +99,109 @@
 
         <div class="row second">
             <div class="col-1 col-"></div>
-            <div class="col-lg-7 col-10 jumbo">
-                THE EASIEST WAY TO MANAGE ALL YOUR EXPENSES. IN ONE PLACE!
+            <div class="col-lg-7 col-10 item">
+                <div class="jumbo">The Easiest Way To Manage
+                    <span style="color: darkorange; font-weight: 600;">All YOUR EXPENSES.</span> In One Place!
+                </div>
+                <a href="#thirds" class="button">What does it do <i class="fa fa-angle-double-down arrow"></i></a>
             </div>
-            <div class="col-lg-5 col-1 circle">
-            </div>
-
-
+            <div class="col-"></div>
         </div>
 
+        <div class="circle"></div>
+
+        <div class="row third">
+            <div class="col-12"  id="thirds">
+                <h2>The only app you'll need to</h2>
+                <div class="typed1"></div>
+            </div>
+        </div>
         <div class="row">
-            <div class="col-12"></div>
+            <div class="col-"></div>
+            <div class="col-lg-6 col-12 icons">
+                <div class="item">
+                    <img src="assets/img/icons/checklist.png" />
+                    <span class="caption">Set a Financial Goal.</span>
+                </div>
+                <div class="item">
+                    <img src="assets/img/icons/invoice.png" />
+                    <span class="caption">Save Your Records.</span>
+                </div>
+                <div class="item">
+                    <img src="assets/img/icons/receipt.png" />
+                    <span class="caption">Reduce Your Expenses.</span>
+                </div>
+                <div class="item">
+                    <img src="assets/img/icons/calculator.png" />
+                    <span class="caption">Integrated Solution.</span>
+                </div>
+                <div class="item">
+                    <img src="assets/img/icons/wallet.png" />
+                    <span class="caption">Save More Money!</span>
+                </div>
+            </div>
+            <div class="col-"></div>
         </div>
 
+        <div class="row footer">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-3 col-12">
+                <ul style="list-style: none" class="contact">
+                    <h4>Expensee</h4>
+                    <hr>
+                    <li>128, Jalan Genting Klang,</li>
+                    <li>53300 Kuala Lumpur, Malaysia</li>
+                    <li><a href="mailto:expenseeapp@gmail.com">expenseeapp@gmail.com</a></li>
+                    <li>+60175562049</li>
+
+                </ul>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2 col-12">
+                <ul style="list-style: none">
+                    <h4>About Us</h4>
+                    <hr>
+                    <li><a href="pages/team.html">Our Team</a></li>
+                    <li><a href="pages/how.html">How it Works?</a></li>
+                    <li><a href="pages/faq.html">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-12">
+                <ul style="list-style: none">
+                    <h4>Social</h4>
+                    <hr>
+                    <li><a href="https://www.twitter.com/expenseeapp">Twitter</a></li>
+                    <li><a href="https://www.facebook.com/expenseeapp">Facebook</a></li>
+                    <li><a href="contact.html">Get in Touch</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2"></div>
+
+        </div>
     </div>
 
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="assets/boostrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <script type="text/javascript" src="assets/javascript/typed.js"></script>
+
+    <script type="text/javascript">
+        var typed1 = new Typed('.typed1', {
+            strings: ["Organize Expenses.", "Achieve Financial Goals.", "Keep Records."],
+            typeSpeed: 80,
+            startDelay: 1000,
+            backDelay: 500,
+            backSpeed: 40,
+            loop: true
+        });
+    </script>
 
     <script>
         var signup = document.getElementById('sign-wrapper');
         var signin = document.getElementById('sign-in');
-        
+
         window.onclick = function(event) {
             if (event.target == signup) {
                 signup.style.display = "none";
@@ -125,11 +209,8 @@
             if (event.target == signin) {
                 signin.style.display = "none";
             }
-        } 
+        }
     </script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="assets/boostrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>

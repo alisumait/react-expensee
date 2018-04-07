@@ -1,6 +1,39 @@
 a {
     cursor: pointer;
 }
+html{
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: "Averta";
+    src: url("../fonts/Averta-Light.woff") format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Averta";
+    src: url("../fonts/Averta-Bold.woff") format('woff');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Averta";
+    src: url("../fonts/Averta-Semibold.woff") format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Averta";
+    src: url("../fonts/Averta-Regular.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Averta';
+}
 
 #top,
 #bottom,
@@ -10,6 +43,100 @@ a {
     border: none;
     position: fixed;
     z-index: 999;
+}
+
+.typed1::after {
+    content: '|';
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+h4 {
+    font-weight: 300;
+    color: dimgray;
+}
+
+/*Removes cursor that comes with typed.js*/
+
+.typed-cursor {
+    opacity: 0;
+    display: none;
+}
+
+/*Custom cursor animation*/
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.third {
+    margin-top: 250px !important;
+    text-align: center;
+}
+
+.typed1 {
+    font-size: 42px;
+    font-weight: 300;
+    color: dimgray;
+}
+
+h2 {
+    font-size: 55px;
+    color: black;
+    font-weight: normal;
+}
+
+div.item {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+    width: 130px;
+    margin-top: 3%;
+}
+.arrow{
+    color: orange;
+    vertical-align: text-bottom;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+img {
+    height: 100px;
+    padding-left: 20%;
+    border-radius: 50%;
+}
+
+.caption {
+    display: block;
+    margin-left: 13%;
+    margin-top: 8%;
+    color: dimgray;
+    font-weight: 300;
 }
 
 #left,
@@ -42,15 +169,35 @@ a {
     bottom: 0;
 }
 
-html,
 body {
     height: 100%;
+    width: 100% !important;
+    overflow-x: hidden;
 }
 
+.footer {
+    height: 100%;
+    padding: 65px 0px;
+    font-weight: 600;
+    margin-top: 80px !important;
+    background-color: #f8f9fa;
+}
+
+.footer > [class *="col-"] {
+    margin: 0 !important;
+}
+
+ul {
+    padding: 0px 10px;
+
+}
+
+
 .container-fluid {
-    height: 2000px;
+    height: 100%;
     width: 100%;
     padding: 15px;
+    position: relative;
 }
 
 [class*="col-"] {
@@ -60,8 +207,8 @@ body {
 .logo {
     font-size: 43px;
     white-space: normal;
-    font-family: 'Raleway', sans-serif;
     color: black !important;
+    font-weight: 300;
     word-break: break-word;
     text-decoration: none !important;
 }
@@ -69,9 +216,8 @@ body {
 .dot {
     color: orange;
     display: inline;
-    font-size: 70px;
+    font-size: 90px;
     line-height: 0;
-    font-family: 'Lato', 'sans-serif';
 }
 
 .second > [class*="col-"] {
@@ -79,29 +225,29 @@ body {
     margin-right: 0;
 }
 
-.second {
-    overflow: hidden;
-    position: relative;
-    height: 100%;
 
+.jumbo {
+    margin-top: 30px;
+    font-weight: 300;
+    color: black;
+    width: 95%;
+    font-size: 70px;
+    padding-left: 20px;
+    text-align: left;
 }
 
 .circle {
-    height: 32%;
-    border-radius: 50%;
-    left: 63% !important;
-    background: linear-gradient(135deg, rgba(255, 174, 39, 1) 0%, rgba(222, 73, 109, 1) 100%);
-    margin-top: 12%;
     position: absolute;
+    top: 0;
+    margin-top: 15%;
+    right: -85px;
     overflow: hidden;
+    border-radius: 50%;
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(135deg, rgba(255, 174, 39, 1) 0%, rgba(222, 73, 109, 1) 100%);
 }
 
-.jumbo {
-    margin-top: 12px;
-    font-family: 'Montserrat Subrayada', 'sans-serif';
-    font-size: 75px;
-    padding-left: 40px;
-}
 
 .login-box {
     width: 45%;
@@ -117,20 +263,19 @@ body {
     margin: auto;
 }
 
-.row{
-        margin: auto;
+.row {
+    margin: auto;
 }
 
-.center{
+.center {
     margin: auto;
     height: 100%;
 }
 
 .sign {
     font-size: 18px;
-    font-family: 'Cabin', sans-serif;
     font-style: italic;
-    color: black!important;
+    color: black;
     text-decoration: none !important;
     padding: 22px 15px 0px 0px;
     vertical-align: middle;
@@ -199,6 +344,16 @@ h1 {
     font-size: 28px;
 }
 
+.button {
+    font-size: 23px;
+    color: dimgray;
+    float: left;
+    font-weight: 300;
+    margin-left: 20px;
+    margin-top: 2%;
+    text-decoration: none !important;
+}
+
 input[type="text"],
 input[type="password"] {
     display: block;
@@ -209,7 +364,7 @@ input[type="password"] {
     height: 10.5%;
     border: none;
     border-bottom: 1px solid darkorange;
-    font-family: 'Raleway', sans-serif;
+
     font-weight: 400;
     font-size: 15px;
     transition: 0.2s ease;
@@ -231,7 +386,7 @@ input[type="submit"] {
     border: none;
     border-radius: 2px;
     color: #FFF;
-    font-family: 'Raleway', sans-serif;
+
     font-weight: 500;
     text-transform: uppercase;
     transition: 0.1s ease;
@@ -279,7 +434,7 @@ button.social-signin {
     border: none;
     border-radius: 2px;
     color: #FFF;
-    font-family: 'Raleway', sans-serif;
+
     font-weight: 500;
     transition: 0.2s ease;
     cursor: pointer;
@@ -317,7 +472,7 @@ button.social-signin.google {
         overflow: auto;
     }
     .jumbo {
-        font-size: 60px;
+        font-size: 56px !important;
     }
 
     #top,
@@ -330,36 +485,48 @@ button.social-signin.google {
     }
 
     .circle {
-        height: 27%;
-        left: 69% !important;
-
+        height: 520px;
+        width: 520px;
     }
 }
 
 @media screen and (max-width: 1080px) {
 
     .jumbo {
-        font-size: 57px;
+        font-size: 50px !important;
     }
     .circle {
-        height: 21%;
+        height: 480px;
+        width: 480px;
+        right: -95px;
+        margin-top: 17%;
     }
+
+
 }
 
 @media screen and (max-width: 992px) {
 
     .jumbo {
-        font-size: 43px;
-        height: 70%;
         text-align: center;
-        padding-left: 0;
+        width: 100%;
+        padding: 0 !important;
+    }
+    .jumbo > span {
+        color: white !important;
+        display: block;
     }
     input[type="submit"] {
         padding: 2%;
-        
+    }
+    img {
+        height: 95px;
     }
     .dot {
         color: white;
+    }
+    .sign {
+        color: white !important;
     }
     .circle {
         display: none;
@@ -369,9 +536,91 @@ button.social-signin.google {
         background: linear-gradient(135deg, rgba(255, 174, 39, 1) 0%, rgba(222, 73, 109, 1) 100%);
     }
 
+    .footer {
+        font-size: 14px;
+        background-color: rgba(248, 249, 250, .9);
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+    .typed1 {
+        color: white;
+    }
+    .button {
+        border-color: white;
+        color: white;
+        border-radius: 40px;
+        float: none;
+        margin: 8%;
+        display: block;
+        padding: 7px 35px;
+        font-size: 20px !important;
+    }
+    .arrow{
+        color: black;
+    }
+    .button:hover {
+        background-color: white;
+    }
+    .button:hover>.arrow{
+        color: darkorange;
+    }
+    .third {
+        margin-top: 9% !important;
+    }
+    .typed1 {
+        font-size: 35px !important;
+        color: white;
+    }
+
+    img {
+        padding-left: 0;
+        height: 90px;
+    }
+    h2 {
+        font-size: 50px !important;
+    }
+    .caption {
+        color: white;
+        margin-left: 0;
+    }
+
+
 }
 
+@media screen and (max-width: 780px) {
+
+
+    .icons {
+        display: block;
+        padding: 0;
+    }
+
+    div.item {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+}
+
+
 @media screen and (max-width: 680px) {
+
+    .typed1 {
+        font-size: 27px !important;
+        color: white;
+    }
+
+
+    h2 {
+        font-size: 36px !important;
+    }
+    .caption {
+        color: white;
+    }
 
     #top,
     #bottom {
@@ -388,7 +637,7 @@ button.social-signin.google {
         font-size: 60px;
     }
     .sign {
-        font-size: 15px;
+        font-size: 14px;
         padding: 20px 11px 0px 0px;
     }
     .login-box {
@@ -401,7 +650,7 @@ button.social-signin.google {
         display: block;
     }
     .jumbo {
-        font-size: 40px;
+        font-size: 40px !important;
     }
 
     input[type="text"],
@@ -409,8 +658,9 @@ button.social-signin.google {
         width: 92%;
         height: 9%;
         padding: 4%;
-        font-size: 13px;
+        font-size: 13px !important;
         margin: auto;
+        font-weight: 300;
     }
     h1 {
         font-size: 25px;
@@ -426,6 +676,7 @@ button.social-signin.google {
     input[type="submit"] {
         width: 85%;
         padding: 2%;
+        font-weight: 600;
     }
 }
 
@@ -449,7 +700,23 @@ button.social-signin.google {
     }
 
     .jumbo {
-        font-size: 35px;
+        font-size: 35px !important;
+    }
+
+
+    h2 {
+        font-size: 30px !important;
+    }
+
+    .typed1 {
+        font-size: 23px !important;
+    }
+    img {
+        height: 85px;
+    }
+
+    .caption {
+        font-size: 15px;
     }
 
     .dot {
@@ -460,12 +727,17 @@ button.social-signin.google {
         width: 90%;
 
     }
+    .button {
+        padding: 4px 30px;
+        margin-top: 20px;
+        font-size: 16px;
+    }
 }
 
 
 @media screen and (max-width: 360px) {
     .logo {
-        font-size: 28px;
+        font-size: 28px !important;
         padding-right: 6px;
         margin: 0;
     }
@@ -475,6 +747,11 @@ button.social-signin.google {
     }
 
     .jumbo {
-        font-size: 28px;
+        font-size: 28px !important;
+        height: 100% !important;
+        width: 100% !important;
+    }
+    .button {
+        font-size: 14px;
     }
 }
