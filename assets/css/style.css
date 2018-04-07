@@ -1,9 +1,3 @@
-a {
-    cursor: pointer;
-}
-html{
-    scroll-behavior: smooth;
-}
 @font-face {
     font-family: "Averta";
     src: url("../fonts/Averta-Light.woff") format('woff');
@@ -31,8 +25,19 @@ html{
     font-style: normal;
 }
 
+a {
+    cursor: pointer;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Averta';
+    height: 100%;
+    width: 100% !important;
+    overflow-x: hidden;
 }
 
 #top,
@@ -43,100 +48,6 @@ body {
     border: none;
     position: fixed;
     z-index: 999;
-}
-
-.typed1::after {
-    content: '|';
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
-}
-
-h4 {
-    font-weight: 300;
-    color: dimgray;
-}
-
-/*Removes cursor that comes with typed.js*/
-
-.typed-cursor {
-    opacity: 0;
-    display: none;
-}
-
-/*Custom cursor animation*/
-
-@keyframes blink {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes blink {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.third {
-    margin-top: 250px !important;
-    text-align: center;
-}
-
-.typed1 {
-    font-size: 42px;
-    font-weight: 300;
-    color: dimgray;
-}
-
-h2 {
-    font-size: 55px;
-    color: black;
-    font-weight: normal;
-}
-
-div.item {
-    vertical-align: top;
-    display: inline-block;
-    text-align: center;
-    margin: auto;
-    width: 130px;
-    margin-top: 3%;
-}
-.arrow{
-    color: orange;
-    vertical-align: text-bottom;
-}
-
-.icons {
-    display: flex;
-    justify-content: space-around;
-}
-
-img {
-    height: 100px;
-    padding-left: 20%;
-    border-radius: 50%;
-}
-
-.caption {
-    display: block;
-    margin-left: 13%;
-    margin-top: 8%;
-    color: dimgray;
-    font-weight: 300;
 }
 
 #left,
@@ -169,29 +80,10 @@ img {
     bottom: 0;
 }
 
-body {
-    height: 100%;
-    width: 100% !important;
-    overflow-x: hidden;
+[class*="col-"],
+.row {
+    margin: auto;
 }
-
-.footer {
-    height: 100%;
-    padding: 65px 0px;
-    font-weight: 600;
-    margin-top: 80px !important;
-    background-color: #f8f9fa;
-}
-
-.footer > [class *="col-"] {
-    margin: 0 !important;
-}
-
-ul {
-    padding: 0px 10px;
-
-}
-
 
 .container-fluid {
     height: 100%;
@@ -200,9 +92,6 @@ ul {
     position: relative;
 }
 
-[class*="col-"] {
-    margin: auto;
-}
 
 .logo {
     font-size: 43px;
@@ -220,6 +109,7 @@ ul {
     line-height: 0;
 }
 
+
 .second > [class*="col-"] {
     margin-left: 0;
     margin-right: 0;
@@ -236,6 +126,21 @@ ul {
     text-align: left;
 }
 
+.button {
+    font-size: 23px;
+    color: dimgray;
+    float: left;
+    font-weight: 300;
+    margin-left: 20px;
+    margin-top: 2%;
+    text-decoration: none !important;
+}
+
+.arrow {
+    color: orange;
+    vertical-align: text-bottom;
+}
+
 .circle {
     position: absolute;
     top: 0;
@@ -248,6 +153,95 @@ ul {
     background: linear-gradient(135deg, rgba(255, 174, 39, 1) 0%, rgba(222, 73, 109, 1) 100%);
 }
 
+.third {
+    margin-top: 250px !important;
+    text-align: center;
+}
+
+.typed1::after {
+    content: '|';
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+h4 {
+    font-weight: 300;
+    color: dimgray;
+}
+
+.typed1 {
+    font-size: 42px;
+    font-weight: 300;
+    color: dimgray;
+}
+
+.typed-cursor {
+    opacity: 0;
+    display: none;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+h2 {
+    font-size: 55px;
+    color: black;
+    font-weight: normal;
+}
+
+div.item {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+    width: 130px;
+    margin-top: 3%;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+img {
+    height: 100px;
+    padding-left: 20%;
+    border-radius: 50%;
+}
+
+.caption {
+    display: block;
+    margin-left: 13%;
+    margin-top: 8%;
+    color: dimgray;
+    font-weight: 300;
+}
+
+footer {
+    height: 100%;
+    padding: 65px 0px;
+    font-weight: 600;
+    margin-top: 80px !important;
+    background-color: #f8f9fa;
+}
+
+footer > [class *="col-"] {
+    margin: 0 !important;
+}
+
+ul {
+    padding: 0px 10px;
+}
 
 .login-box {
     width: 45%;
@@ -263,9 +257,6 @@ ul {
     margin: auto;
 }
 
-.row {
-    margin: auto;
-}
 
 .center {
     margin: auto;
@@ -344,15 +335,6 @@ h1 {
     font-size: 28px;
 }
 
-.button {
-    font-size: 23px;
-    color: dimgray;
-    float: left;
-    font-weight: 300;
-    margin-left: 20px;
-    margin-top: 2%;
-    text-decoration: none !important;
-}
 
 input[type="text"],
 input[type="password"] {
@@ -536,7 +518,7 @@ button.social-signin.google {
         background: linear-gradient(135deg, rgba(255, 174, 39, 1) 0%, rgba(222, 73, 109, 1) 100%);
     }
 
-    .footer {
+    footer {
         font-size: 14px;
         background-color: rgba(248, 249, 250, .9);
     }
@@ -557,13 +539,13 @@ button.social-signin.google {
         padding: 7px 35px;
         font-size: 20px !important;
     }
-    .arrow{
+    .arrow {
         color: black;
     }
     .button:hover {
         background-color: white;
     }
-    .button:hover>.arrow{
+    .button:hover > .arrow {
         color: darkorange;
     }
     .third {
