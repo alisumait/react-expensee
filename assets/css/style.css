@@ -478,7 +478,7 @@ button.social-signin.google {
 
     .jumbo {
         text-align: center;
-        width: 100%;
+        margin-top: 30px;
         padding: 0 !important;
     }
     .jumbo > span {
@@ -503,6 +503,7 @@ button.social-signin.google {
     }
     .container-fluid {
         background: linear-gradient(135deg, rgba(255, 174, 39, 1) 0%, rgba(222, 73, 109, 1) 100%);
+        padding: 8px;
     }
     header {
         padding-top: 0px;
@@ -660,8 +661,8 @@ button.social-signin.google {
 
 @media screen and (max-width: 575px) {
     .container-fluid {
-        padding-left: 22px;
-        padding-right: 22px;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 }
 
@@ -678,7 +679,7 @@ button.social-signin.google {
     }
 
     .jumbo {
-        font-size: 35px !important;
+        font-size: 40px !important;
     }
 
 
@@ -698,7 +699,7 @@ button.social-signin.google {
     }
 
     .dot {
-        font-size: 45px;
+        font-size: 45px !important;
     }
     button.social-signin,
     input[type="submit"] {
@@ -706,9 +707,9 @@ button.social-signin.google {
 
     }
     .button {
-        padding: 4px 30px;
-        margin-top: 20px;
-        font-size: 16px;
+        padding: 4px 30px !important;
+        margin-top: 25px;
+        font-size: 20px !important;
     }
 }
 
@@ -720,16 +721,16 @@ button.social-signin.google {
         margin: 0;
     }
     .sign {
-        font-size: 13px;
+        font-size: 13px !important;
         padding: 15px 9px 0px 0px;
     }
 
     .jumbo {
-        font-size: 28px !important;
+        font-size: 32px !important;
         height: 100% !important;
         width: 100% !important;
     }
     .button {
-        font-size: 14px;
+        font-size: 18px !important;
     }
 }

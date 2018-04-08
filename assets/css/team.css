@@ -16,7 +16,7 @@
     margin: 0;
 }
 
-h1 {
+.carousel > h1 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -74,7 +74,7 @@ h5 {
     .img {
         height: auto !important;
     }
-    h1 {
+   .carousel > h1 {
         font-size: 45px !important;
     }
     h2 {
@@ -108,7 +108,7 @@ h5 {
 
 @media screen and (max-width: 720px) {
 
-    h1 {
+   .carousel > h1 {
         font-size: 35px !important;
     }
     h2 {
@@ -122,7 +122,7 @@ h5 {
 
 @media screen and (max-width: 480px) {
 
-    h1 {
+    .carousel > h1 {
         font-size: 30px !important;
     }
     h2 {
