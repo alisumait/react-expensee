@@ -1,186 +1,173 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<!-- START Head Tags, Fonts, Styles -->
+
 <head>
-      <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="assets/boostrap/css/bootstrap.min.css">
-    <link type="text/css" rel="stylesheet" href="assets/boostrap/css/bootstrap-grid.min.css">
-    <link type="text/css" rel="stylesheet" href="assets/css/style.css">
+    <link type="text/css" rel="stylesheet" href="../assets/boostrap/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="../assets/boostrap/css/bootstrap-grid.min.css">
+    <link type="text/css" rel="stylesheet" href="../assets/css/style.css">
+    <link type="text/css" rel="stylesheet" href="../assets/css/team.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
-    <title>Expensee</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-.column {
-  float: left;
-  width: 27.3%;
-  margin-bottom: 16px;
-  padding: 0 8px;
-}
-
-@media screen and (max-width: 650px) {
-  .column {
-    width: 100%;
-    display: block;
-  }
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.container {
-  padding: 0 16px;
-}
-
-.container::after, .row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.title {
-  color: grey;
-}
-
-.button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-}
-#main{
-  margin-left: 5cm;
-  margin-right: 5cm;
-  padding-top: 2.5cm; 
-  padding-left: 3.5cm;
-
-
-}
-
-
-.button:hover {
-  background-color: #555;
-}   
-</style>
+    <title>Expensee | Team</title>
 </head>
+<!-- END Head -->
 
-<body style="background:orange">
-
-<marquee direction="down"> 
-<h1 id="team" style="text-align: center; text-shadow: gold; font-family: Arial Black, Gadget, sans-serif; color: red;" >Expensee Team </h1></marquee >
-<p style="text-align: center; font-family: Arial Black, Gadget, sans-serif; " > <b> With Expensee make your financial life more stable, balanced and dream of a better future </b></p>
-</div>
+<body>
 
 
-<div id="main" style="background: white">
+    <!-- START 4 Screen Black Frame -->
+    <div id="left"></div>
+    <div id="right"></div>
+    <div id="top"></div>
+    <div id="bottom"></div>
+    <!-- END Screen Frame -->
+
+    <div class="container-fluid">
 
 
-<div class="row">
-  <div class="column">
-    <div class="card">
-      <img src="blank.png" alt="Ali" style="width:5cm; height: 5cm ; border-radius: 50%; border-color:red;">
-      <div class="container">
-        <h2 style="font-family: Arial Black, Gadget, sans-serif">Ali Hasan</h2>
-        <p class="title">Web developer </p>
-        <p>Software Engineer at university of Malaya Matrix number (WIF160715)</p>
-        <p>Ali@gmail.com</p>
-        <p><button class="button" id="Ali" >Contact</button></p>
-      </div>
-    </div>
-  </div>
+        <!-- START Sign up Popup -->
+        <div id="sign-wrapper" class="back">
+            <div class="login-box animate">
+                <div class="row center">
+                    <div class="col-md-5 col-12 left">
+                        <h1>Sign up</h1>
 
 
+                        <input type="text" name="email" placeholder="E-mail" id="email" />
+                        <input type="password" name="password" placeholder="Password" id="password" />
+                        <input type="password" name="password2" placeholder="Retype password" id="repassword" />
+
+                        <input type="submit" name="signup_submit" value="Sign me up" onclick="handleSignUp()" />
+                    </div>
+                    <div class="col-md-2 col-12">
+
+                        <div class="or">OR</div>
+                    </div>
+                    <div class="col-md-5 col-12 right">
+
+                        <button class="social-signin facebook" onclick="signinfacebook()">Log in with facebook</button>
+                        <button class="social-signin twitter" onclick="signintwitter()">Log in with Twitter</button>
+                        <button class="social-signin google" onclick="signingoogle()">Log in with Google</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END Signup Popup -->
+
+        <!-- START Signin Popup -->
+        <div id="sign-in" class="back">
+            <div class="login-box animate">
+                <div class="row center">
+                    <div class="col-md-5 col-12 left">
+                        <h1>Sign in</h1>
 
 
-  <div class="column">
-    <div class="card">
-      <img src="ebrahim.jpg" alt="Mike" style="width:5cm; height: 5cm ; border-radius: 50%;" >
-      <div class="container">
-        <h2 style="font-family: Arial Black, Gadget, sans-serif">Ebrahim</h2>
-        <p class="title">database designer </p>
-        <p>Software Engineer at university of Malaya Matrix number (WIF160715) </p>
-        <p>ebra.malay2016@gmail.com</p>
-        <p><button class="button" id="ebra">Contact </button></p>
-      </div>
-    </div>
-  </div>
+                        <input type="text" name="email" placeholder="Email" />
+                        <input type="password" name="password" placeholder="Password" />
 
 
+                        <input type="submit" name="signup_submit" value="Sign me in" />
+                    </div>
+                    <div class="col-md-2 col-12">
 
+                        <div class="or">OR</div>
+                    </div>
+                    <div class="col-md-5 col-12 right">
 
+                        <button class="social-signin facebook" onclick="signinfacebook()">Log in with facebook</button>
+                        <button class="social-signin twitter" onclick="signintwitter()">Log in with Twitter</button>
+                        <button class="social-signin google" onclick="signingoogle()">Log in with Google</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END Signin Popup -->
+        <!-- START Header Row -->
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-md-8 col-sm-10 col-12">
 
-  <div class="column">
-    <div class="card">
-      <img src="Mahin.jpg" alt="John" style="width:5cm; height: 5cm ; border-radius: 50%;">
-      <div class="container">
-        <h2 style="font-family: Arial Black, Gadget, sans-serif">Mahin Arafat</h2>
-        <p class="title">Designer</p>
-        <p>Software Engineer at university of Malaya Matrix number (WIF160715)</p>
-       <p>mahin@gmail.com</p>
-       <p><button class="button" id="mahin">Contact</button></p>
-      </div>
-    </div>
-  </div>
-</div>
+                <header>
 
+                    <a class="logo" href="../index.html">expensee<p class="dot">.</p></a>
+                    <a class="sign" onclick="document.getElementById('sign-in').style.display='block'" style="float: right;">Sign in</a>
+                    <a class="sign" onclick="document.getElementById('sign-wrapper').style.display='block'" style="float: right;">Join Us</a>
 
+                </header>
 
+            </div>
+            <div class="col"></div>
 
-<div class="row" >
-  <div class="column" >
-    <div class="card" >
-      <img src="avro.jpg" alt="Jane" style="width:5cm; height: 5cm ; border-radius: 50%;">
-      <div class="container" ">
-        <h2 style="font-family: Arial Black, Gadget, sans-serif">Taufiqur Rahman</h2>
-        <p class="title">Web Developer </p>
-        <p>Software Engineer at university of Malaya Matrix number (WIF160715)</p>
-        <p>avro@gmail.com</p>
-         <p><button class="button" id="avro">Contact  </a></button></p>
+        </div>
+        <!-- END Header Row -->
+        <!-- START Carousel -->
+        <div class="row">
+            <div class="col-12 carousel">
+                <img class="img" alt="Expensee img" src="../assets/img/company.jpg">
+                <h1>About Expensee</h1>
+            </div>
+        </div>
+        <!-- END Carousel-->
+        <!-- START Mission -->
+        <div class="row mission">
+            <div class="col-12">
+                <h2>Our Mission</h2>
+                <p>To create an easy way for individuals to manage their expenses and save time, money, and effort.</p>
+                <p>We do this by continually innovating and updating our app.</p>
+            </div>
+        </div>
+        <hr>
+        <br>
+        <!-- END Mission -->
 
-      </div>
-    </div>
-  </div>
+        <!-- START Team -->
+        <div class="row team">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <h2>Our Team</h2>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../assets/img/ali.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Ali Sumait<span style="display: block; margin-top: 3px; font-weight: 300; font-size: 18px">Full Stack Developer</span></h5>
+                        <a href="mailto:alisumait@gmai.com" class="btn btn-warning">contact</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../assets/img/ovro.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Taufiqur Rahman<span style="display: block; margin-top: 3px; font-weight: 300; font-size: 18px">UX Designer</span></h5>
+                        <a href="mailto:ovro@gmai.com" class="btn btn-warning">contact</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../assets/img/mahin.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Mahin Arafat<span style="display: block; margin-top: 3px; font-weight: 300; font-size: 18px">Web Developer</span></h5>
+                        <a href="mailto:mahin@gmai.com" class="btn btn-warning">contact</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../assets/img/ebrahim.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Ebrahim<span style="display: block; margin-top: 3px; font-weight: 300; font-size: 18px">Database Designer</span></h5>
+                        <a href="mailto:ebrahim@gmai.com" class="btn btn-warning">contact</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../assets/img/muttaki.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Habib Al Muttaki<span style="display: block; margin-top: 3px; font-weight: 300; font-size: 18px">Front-End Developer</span></h5>
+                        <a href="mailto:muttaki@gmai.com" class="btn btn-warning">contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <!-- END Team -->
 
-
-
-
-
-  <div class="row">
-  <div class="column">
-    <div class="card">
-      <img src="blank.png" alt="Jane" style="width:5cm; height: 5cm ; border-radius: 50%;">
-      <div class="container">
-        <h2 style="font-family: Arial Black, Gadget, sans-serif">habib al muttaki</h2>
-        <p class="title">front-end designer  </p>
-        <p>Software Engineer at university of Malaya Matrix number (WIF160715)</p>
-        <p>habib@gmail.com</p>
-        <p><button class="button" id="habib">Contact</button></p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-</div>
-</div>
-
-
+        <!-- START FOOTER -->
 
         <footer class="row">
             <div class="col-lg-2"></div>
@@ -210,51 +197,47 @@ html {
                     <h4>Social</h4>
                     <hr>
                     <li><a href="https://www.twitter.com/expenseeapp">Twitter</a></li>
-                    <li><a href="https://www.facebook.com/expenseeapp">Facebook</a></li>
+                    <li><a href="https://www.facebook.com/ali.app.353">Facebook</a></li>
                     <li><a href="pages/contact.html">Get in Touch</a></li>
                 </ul>
             </div>
             <div class="col-lg-2"></div>
         </footer>
+        <!-- END FOOTER -->
 
+    </div>
+    <!-- START Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="../assets/boostrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
 
+    <script type="text/javascript">
+        var typed1 = new Typed('.typed1', {
+            strings: ["Organize Expenses.", "Achieve Financial Goals.", "Keep Records."],
+            typeSpeed: 80,
+            startDelay: 1000,
+            backDelay: 500,
+            backSpeed: 40,
+            loop: true
+        });
+    </script>
 
+    <script>
+        var signup = document.getElementById('sign-wrapper');
+        var signin = document.getElementById('sign-in');
 
-        <!--java script functions for buttons-->
-
-<script type="text/javascript">
-    document.getElementById("ali").onclick = function () {
-        location.href = "http://facebook.com";
-    };
-</script>
-
-
-<script type="text/javascript">
-    document.getElementById("ebra").onclick = function () {
-        location.href = "https://www.facebook.com/Ebrahim.aldumaini";
-    };
-</script>
-
-
-<script type="text/javascript">
-    document.getElementById("avro").onclick = function () {
-        location.href = "https://www.facebook.com/ovroo";
-    };
-</script>
-
-<script type="text/javascript">
-    document.getElementById("mahin").onclick = function () {
-        location.href = "https://www.facebook.com/m.meiem";
-    };
-</script>
-
-<script type="text/javascript">
-    document.getElementById("habib").onclick = function () {
-        location.href = "http://facebook.com";
-    };
-</script>
-
-
+        window.onclick = function(event) {
+            if (event.target == signup) {
+                signup.style.display = "none";
+            }
+            if (event.target == signin) {
+                signin.style.display = "none";
+            }
+        }
+    </script>
+    <!-- END Scripts -->
 
 </body>
+
 </html>
