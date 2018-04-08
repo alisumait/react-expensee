@@ -8,8 +8,10 @@
     <link type="text/css" rel="stylesheet" href="../assets/boostrap/css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="../assets/boostrap/css/bootstrap-grid.min.css">
     <link type="text/css" rel="stylesheet" href="../assets/css/style.css">
-    <link type="text/css" rel="stylesheet" href="../assets/css/team.css">
-    <title>Expensee | how</title>
+    <link type="text/css" rel="stylesheet" href="../assets/css/faq.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <title>Expensee | How?</title>
 </head>
 <!-- END Head -->
 
@@ -23,7 +25,7 @@
     <div id="bottom"></div>
     <!-- END Screen Frame -->
 
-    <div class="container-fluid">
+    <div class="container-fluid" id="how">
 
 
         <!-- START Sign up Popup -->
@@ -83,6 +85,7 @@
             </div>
         </div>
         <!-- END Signin Popup -->
+
         <!-- START Header Row -->
         <div class="row">
             <div class="col"></div>
@@ -102,184 +105,43 @@
         </div>
         <!-- END Header Row -->
 
-        
+        <div class="row list">
 
-<style >
-	@import url('https://fonts.googleapis.com/css?family=Hind:300,400');
-
-*, *:before, *:after {
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
-}
-
-html {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Hind', sans-serif;
-  background: #fff;
-  color: #092B66;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-}
-
-.container {
-  margin: 0 auto;
-  padding: 4rem;
-  width: 48rem;
-}
-
-h3 {
-  font-size: 1.75rem;
-  color: #373d51;
-  padding: 1.3rem;
-  margin: 0;
-}
-
-.accordion a {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 100%;
-  padding: 1rem 3rem 1rem 1rem;
-  color: #7288a2;
-  font-size: 1.15rem;
-  font-weight: 400;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.accordion a:hover,
-.accordion a:hover::after {
-  cursor: pointer;
-  color: #03b5d2;
-}
-
-.accordion a:hover::after {
-  border: 1px solid #03b5d2;
-}
-
-.accordion a.active {
-  color: #03b5d2;
-  border-bottom: 1px solid #03b5d2;
-}
-
-.accordion a::after {
-  font-family: 'Ionicons';
-  content: '\f218';
-  position: absolute;
-  float: right;
-  right: 1rem;
-  font-size: 1rem;
-  color: #7288a2;
-  padding: 5px;
-  width: 30px;
-  height: 30px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  border: 1px solid #7288a2;
-  text-align: center;
-}
-
-.accordion a.active::after {
-  font-family: 'Ionicons';
-  content: '\f209';
-  color: #03b5d2;
-  border: 1px solid #03b5d2;
-}
-
-.accordion .content {
-  opacity: 0;
-  padding: 0 1rem;
-  max-height: 0;
-  border-bottom: 1px solid #e5e5e5;
-  overflow: hidden;
-  clear: both;
-  -webkit-transition: all 0.2s ease 0.15s;
-  -o-transition: all 0.2s ease 0.15s;
-  transition: all 0.2s ease 0.15s;
-}
-
-.accordion .content p {
-  font-size: 1rem;
-  font-weight: 300;
-}
-
-.accordion .content.active {
-  opacity: 1;
-  padding: 1rem;
-  max-height: 100%;
-  -webkit-transition: all 0.35s ease 0.15s;
-  -o-transition: all 0.35s ease 0.15s;
-  transition: all 0.35s ease 0.15s;
-}
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8 col-12">
+            <h2>How it Works?</h2>
 
 
-</style>
+            <dl>
 
-<script>
-	const items = document.querySelectorAll(".accordion a");
-
-function toggleAccordion(){
-  this.classList.toggle('active');
-  this.nextElementSibling.classList.toggle('active');
-}
-
-items.forEach(item => item.addEventListener('click', toggleAccordion));
-
-
-
-</script>
-
-<!-- ****WHRITE DESCRIPTION HERE***  -->
-
-<div class="container">
-
-<h2 style="color: darkblue; font-weight: 600;">How our website works</h2>
-
-
-  <dt>To join us</dt>
-  <dl>- First, to get an access an account, you have to has to register first with e-mail address and create a password</dl>
-  <dl>- If you have facebook,twitter or google account, you can also access the site using these.</dl>
-
-  <dt>Security</dt>
-  <dl>- Your security is our concern. Your personal information will secure in our site</dl>
-  <dl>- No unauthorised access.</dl> 
-  <dl>- If wrong password given three times in a row,account will be locked.To acces site again we will give authenticaton code in your mail.</dl>
-
-  <dt>What can you do</dt>
-  <dl>- You can organize your expenses </dl>
-  <dl>- And you can achieve your financial goals</dl>
-  <dl>- we keep user's records</dl>
-
-  <dt>How we reward</dt>
-
-  <dl>- We don't return our customers with empty hands</dl>
-  <dl>- Every month we reward our customers with points based on usages</dl>
-  <dl>- The top scorer gets gifts,vouchers and some free packages from our team</dl>
+                <dt>Accounts:</dt>
+                <dd>First, to get an access an account, you have to has to register first with e-mail address and create a password - If you have facebook, twitter, or google account, you can also access the site using these.
+                </dd>
+                <dt>What Can You Do:</dt>
+                <dd>
+                <ul style="padding-left: 40px; margin-top: 16px">
+                <li>Organize your expenses.</li>
+                <li>Achieve your financial goals.</li>
+                <li>Keep your expenses records safely.</li>
+                </ul>
+                </dd>
+                <dt>Security:</dt> 
+                <dd>Your security is our concern. Your personal information will secure in our site - No unauthorised access. - If wrong password given three times in a row,account will be locked.To acces site again we will give authenticaton code in your mail.
+                </dd>
+                <dt>Features:</dt> 
+                <dd>You can add your expenses everyday and view how much you've spent anytime.
+                <p>At the end of the month, you can automatically convert the month's expenses into a categorized chart so you manage your money better.</p>
+                </dd>
+                <dt>How We Reward:</dt>
+                <dd>We don't return our customers with empty hands - Every month we reward our customers with points based on usages - The top scorer gets gifts, vouchers, and some free packages from our team
+</dd>
+            </dl>
+        </div>
+                        <div class="col-sm-2"></div>
+        </div>
 
 
-
-
-
-
-</div>  
-
-<!-- START FOOTER -->
+        <!-- START FOOTER -->
 
         <footer class="row">
             <div class="col-lg-2"></div>
@@ -319,12 +181,11 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
 
     </div>
 
-  <!-- START Scripts -->
+    <!-- START Scripts -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="../assets/boostrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
-
+    <script type="text/javascript" src="../assets/javascript/app.js"></script>
     <script>
         var signup = document.getElementById('sign-wrapper');
         var signin = document.getElementById('sign-in');
@@ -337,8 +198,10 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
                 signin.style.display = "none";
             }
         }
+
     </script>
     <!-- END Scripts -->
 
-  </body>
+</body>
+
 </html>

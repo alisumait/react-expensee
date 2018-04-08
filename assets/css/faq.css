@@ -1,0 +1,103 @@
+.container-fluid .accordion, dl {
+    padding: 3rem;
+    width: 100%;
+}
+
+#faq h2,
+#contact h2,
+#how h2{
+    text-align: center;
+    margin-top: 45px;
+    color: orange;
+    font-weight: 600;
+}
+
+dd{
+    padding: 8px 0px;
+}
+
+#contact h2{
+    color: white;
+}
+
+.accordion a {
+    display: inline-block;
+    width: 100%;
+    padding: 16px 48px 16px 16px;
+    color: orange;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+.accordion a:hover,
+.accordion a:hover::after {
+    cursor: pointer;
+    color: darkorange;
+}
+
+.accordion a:hover::after {
+    border: 1px solid orange;
+}
+
+.accordion a{
+    color: gray !important;
+}
+
+.accordion a.active {
+    color: gray;
+    border-bottom: 2px solid darkorange;
+}
+
+.accordion a::after {
+    font-family: 'FontAwesome';
+    content: '\f067';
+    position: absolute;
+    padding: 2px;
+    float: right;
+    right: 18px;
+    font-size: 16px;
+    color: orange;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #7288a2;
+    text-align: center;
+}
+
+.accordion a.active::after {
+    font-family: 'FontAwesome';
+    content: '\f068';
+    color: orange;
+    border: 1px solid orange;
+}
+
+.accordion .content {
+    max-height: 0;
+    border-bottom: 1px solid #e5e5e5;
+    overflow: hidden;
+    clear: both;
+    transition: all 0.3s ease 0.2s;
+    
+}
+
+.accordion .content p {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.accordion .content.active {
+    opacity: 1;
+    padding: 1rem;
+    max-height: 100%;
+    transition: all 0.30s ease 0.2s;
+}
+
+dt{
+    font-size: 40px;
+    font-weight: normal;
+}
+dd{
+    font-size: 17px;
+    font-weight: 300;
+}

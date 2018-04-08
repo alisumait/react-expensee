@@ -1,3 +1,13 @@
+const items = document.querySelectorAll(".accordion a");
+
+function toggleAccordion(){
+  this.classList.toggle('active');
+  this.nextElementSibling.classList.toggle('active');
+}
+
+items.forEach(item => item.addEventListener('click', toggleAccordion));
+
+
 
 var config = {
     apiKey: "AIzaSyBZ0iMv0Hx9pGRLonPfJ3c4DAKZIBLoiZk",
@@ -161,12 +171,3 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
 });
 }
 
-
-const items = document.querySelectorAll(".accordion a");
-
-function toggleAccordion(){
-  this.classList.toggle('active');
-  this.nextElementSibling.classList.toggle('active');
-}
-
-items.forEach(item => item.addEventListener('click', toggleAccordion));
