@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- START Head Tags, Fonts, Styles -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../assets/boostrap/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="../assets/boostrap/css/bootstrap-grid.min.css">
+    <link type="text/css" rel="stylesheet" href="../assets/css/style.css">
+    <link type="text/css" rel="stylesheet" href="../assets/css/team.css">
+    <title>Expensee | FAQ</title>
+</head>
+<!-- END Head -->
+
+<body>
+
+
+    <!-- START 4 Screen Black Frame -->
+    <div id="left"></div>
+    <div id="right"></div>
+    <div id="top"></div>
+    <div id="bottom"></div>
+    <!-- END Screen Frame -->
+
+    <div class="container-fluid">
+
+
+        <!-- START Sign up Popup -->
+        <div id="sign-wrapper" class="back">
+            <div class="login-box animate">
+                <div class="row center">
+                    <div class="col-md-5 col-12 left">
+                        <h1>Sign up</h1>
+
+
+                        <input type="text" name="email" placeholder="E-mail" id="email" />
+                        <input type="password" name="password" placeholder="Password" id="password" />
+                        <input type="password" name="password2" placeholder="Retype password" id="repassword" />
+
+                        <input type="submit" name="signup_submit" value="Sign me up" onclick="handleSignUp()" />
+                    </div>
+                    <div class="col-md-2 col-12">
+
+                        <div class="or">OR</div>
+                    </div>
+                    <div class="col-md-5 col-12 right">
+
+                        <button class="social-signin facebook" onclick="signinfacebook()">Log in with facebook</button>
+                        <button class="social-signin twitter" onclick="signintwitter()">Log in with Twitter</button>
+                        <button class="social-signin google" onclick="signingoogle()">Log in with Google</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END Signup Popup -->
+
+        <!-- START Signin Popup -->
+        <div id="sign-in" class="back">
+            <div class="login-box animate">
+                <div class="row center">
+                    <div class="col-md-5 col-12 left">
+                        <h1>Sign in</h1>
+
+
+                        <input type="text" name="email" placeholder="Email" />
+                        <input type="password" name="password" placeholder="Password" />
+
+
+                        <input type="submit" name="signup_submit" value="Sign me in" />
+                    </div>
+                    <div class="col-md-2 col-12">
+
+                        <div class="or">OR</div>
+                    </div>
+                    <div class="col-md-5 col-12 right">
+
+                        <button class="social-signin facebook" onclick="signinfacebook()">Log in with facebook</button>
+                        <button class="social-signin twitter" onclick="signintwitter()">Log in with Twitter</button>
+                        <button class="social-signin google" onclick="signingoogle()">Log in with Google</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END Signin Popup -->
+        <!-- START Header Row -->
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-md-8 col-sm-10 col-12">
+
+                <header>
+
+                    <a class="logo" href="../index.html">expensee<p class="dot">.</p></a>
+                    <a class="sign" onclick="document.getElementById('sign-in').style.display='block'" style="float: right;">Sign in</a>
+                    <a class="sign" onclick="document.getElementById('sign-wrapper').style.display='block'" style="float: right;">Join Us</a>
+
+                </header>
+
+            </div>
+            <div class="col"></div>
+
+        </div>
+        <!-- END Header Row -->
+
+        
+
+<style >
+	@import url('https://fonts.googleapis.com/css?family=Hind:300,400');
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Hind', sans-serif;
+  background: #fff;
+  color: #4d5974;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 4rem;
+  width: 48rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+  color: #373d51;
+  padding: 1.3rem;
+  margin: 0;
+}
+
+.accordion a {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 3rem 1rem 1rem;
+  color: #7288a2;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.accordion a:hover,
+.accordion a:hover::after {
+  cursor: pointer;
+  color: #03b5d2;
+}
+
+.accordion a:hover::after {
+  border: 1px solid #03b5d2;
+}
+
+.accordion a.active {
+  color: #03b5d2;
+  border-bottom: 1px solid #03b5d2;
+}
+
+.accordion a::after {
+  font-family: 'Ionicons';
+  content: '\f218';
+  position: absolute;
+  float: right;
+  right: 1rem;
+  font-size: 1rem;
+  color: #7288a2;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid #7288a2;
+  text-align: center;
+}
+
+.accordion a.active::after {
+  font-family: 'Ionicons';
+  content: '\f209';
+  color: #03b5d2;
+  border: 1px solid #03b5d2;
+}
+
+.accordion .content {
+  opacity: 0;
+  padding: 0 1rem;
+  max-height: 0;
+  border-bottom: 1px solid #e5e5e5;
+  overflow: hidden;
+  clear: both;
+  -webkit-transition: all 0.2s ease 0.15s;
+  -o-transition: all 0.2s ease 0.15s;
+  transition: all 0.2s ease 0.15s;
+}
+
+.accordion .content p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.accordion .content.active {
+  opacity: 1;
+  padding: 1rem;
+  max-height: 100%;
+  -webkit-transition: all 0.35s ease 0.15s;
+  -o-transition: all 0.35s ease 0.15s;
+  transition: all 0.35s ease 0.15s;
+}
+
+
+</style>
+
+<script>
+	const items = document.querySelectorAll(".accordion a");
+
+function toggleAccordion(){
+  this.classList.toggle('active');
+  this.nextElementSibling.classList.toggle('active');
+}
+
+items.forEach(item => item.addEventListener('click', toggleAccordion));
+
+
+
+</script>
+
+<!-- ****WHRITE DESCRIPTION HERE***  -->
+
+<div class="container">
+
+<h2>How our website works</h2>
+
+
+  <dt>To join us</dt>
+  <dl>1. First, to get an access an account, you have to has to register first with e-mail address and create a password</dl>
+  <dl>2. If you have facebook,twitter or google account, you can also access the site using these.</dl>
+
+   <dt>Security</dt>
+  <dl>1. Your security is our concern. Your personal information will secure in our site</dl>
+  <dl>2. No unauthorised access.</dl> 
+  <dl>3. If wrong password given three times in a row,account will be locked.To acces site again we will give authenticaton code in your mail.</dl>
+</div>  
+
+<!-- START FOOTER -->
+
+        <footer class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-3 col-12">
+                <ul style="list-style: none" class="contact">
+                    <h4>Expensee</h4>
+                    <hr>
+                    <li>128, Jalan Genting Klang,</li>
+                    <li>53300 Kuala Lumpur, Malaysia</li>
+                    <li><a href="mailto:expenseeapp@gmail.com">expenseeapp@gmail.com</a></li>
+                    <li>+60175562049</li>
+
+                </ul>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2 col-12">
+                <ul style="list-style: none">
+                    <h4>About Us</h4>
+                    <hr>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="how.html">How it Works?</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-12">
+                <ul style="list-style: none">
+                    <h4>Social</h4>
+                    <hr>
+                    <li><a href="https://www.twitter.com/expenseeapp">Twitter</a></li>
+                    <li><a href="https://www.facebook.com/ali.app.353">Facebook</a></li>
+                    <li><a href="contact.html">Get in Touch</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2"></div>
+        </footer>
+        <!-- END FOOTER -->
+
+    </div>
+
+  <!-- START Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="../assets/boostrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+    <script>
+        var signup = document.getElementById('sign-wrapper');
+        var signin = document.getElementById('sign-in');
+
+        window.onclick = function(event) {
+            if (event.target == signup) {
+                signup.style.display = "none";
+            }
+            if (event.target == signin) {
+                signin.style.display = "none";
+            }
+        }
+    </script>
+    <!-- END Scripts -->
+
+  </body>
+</html>
