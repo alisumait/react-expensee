@@ -25,6 +25,17 @@
     font-style: normal;
 }
 
+@keyframes jump {
+    0% {
+        top: -8px;
+    }
+    50% {
+        top: 8px;
+    }
+    100% {
+        top: -8px;
+    }
+}
 
 a {
     cursor: pointer;
@@ -141,7 +152,9 @@ header {
 
 .arrow {
     color: orange;
+    position: relative;
     vertical-align: text-bottom;
+    animation: jump 1.5s infinite;
 }
 
 .circle {
@@ -318,13 +331,14 @@ ul {
 
 h1 {
     margin: 0 0 20px 0;
-    font-weight: 300;
+    font-weight: 600;
     font-size: 28px;
+    color: darkorange;
 }
 
 
-input[type="text"],
-input[type="password"] {
+.sign input[type="text"],
+.sign input[type="password"] {
     display: block;
     box-sizing: border-box;
     margin-bottom: 20px;
@@ -333,20 +347,19 @@ input[type="password"] {
     height: 10.5%;
     border: none;
     border-bottom: 1px solid darkorange;
-
     font-weight: 400;
     font-size: 15px;
     transition: 0.2s ease;
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus {
+.sign input[type="text"]:focus,
+.sign input[type="password"]:focus {
     border-bottom: 3px solid orange;
     color: orange;
     transition: 0.2s ease;
 }
 
-input[type="submit"] {
+.sign input[type="submit"] {
     margin-top: 8%;
     padding: 4%;
     width: 100%;
@@ -362,14 +375,14 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-input[type="submit"]:hover,
-input[type="submit"]:focus {
+.sign input[type="submit"]:hover,
+.sign input[type="submit"]:focus {
     opacity: 0.8;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     transition: 0.1s ease;
 }
 
-input[type="submit"]:active {
+.sign input[type="submit"]:active {
     opacity: 1;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
     transition: 0.1s ease;
@@ -433,6 +446,10 @@ button.social-signin.google {
 }
 
 
+
+
+
+
 @media screen and (max-width: 1420px) {
 
     .login-box {
@@ -485,7 +502,7 @@ button.social-signin.google {
         color: white !important;
         display: block;
     }
-    input[type="submit"] {
+    .sign input[type="submit"] {
         padding: 2%;
     }
     img {
@@ -593,7 +610,6 @@ button.social-signin.google {
         color: white;
     }
 
-
     h2 {
         font-size: 36px !important;
     }
@@ -632,8 +648,8 @@ button.social-signin.google {
         font-size: 40px !important;
     }
 
-    input[type="text"],
-    input[type="password"] {
+    .sign input[type="text"],
+    .sign input[type="password"] {
         width: 92%;
         height: 9%;
         padding: 4%;
@@ -652,7 +668,7 @@ button.social-signin.google {
     }
 
     button.social-signin,
-    input[type="submit"] {
+    .sign input[type="submit"] {
         width: 85%;
         padding: 2%;
         font-weight: 600;
@@ -702,7 +718,7 @@ button.social-signin.google {
         font-size: 45px !important;
     }
     button.social-signin,
-    input[type="submit"] {
+    .sign input[type="submit"] {
         width: 90%;
 
     }
