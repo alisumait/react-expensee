@@ -76,6 +76,7 @@ dd{
     max-height: 0;
     border-bottom: 1px solid #e5e5e5;
     overflow: hidden;
+    padding-left: 16px;
     clear: both;
     transition: all 0.3s ease 0.2s;
     
