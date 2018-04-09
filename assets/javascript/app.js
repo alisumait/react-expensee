@@ -1,3 +1,13 @@
+const items = document.querySelectorAll(".accordion a");
+
+function toggleAccordion(){
+  this.classList.toggle('active');
+  this.nextElementSibling.classList.toggle('active');
+}
+
+items.forEach(item => item.addEventListener('click', toggleAccordion));
+
+
 
 var config = {
     apiKey: "AIzaSyBZ0iMv0Hx9pGRLonPfJ3c4DAKZIBLoiZk",
@@ -32,13 +42,13 @@ function handleSignUp() {
     firebase.auth().createUserWithEmailAndPassword(email, password).then(function(user) {
     var user = firebase.auth().currentUser;
     
-        alert("success");
+       location.href="pages/thank.html";
         
 }, function(error) {
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
-    console.log(errorMessage);
+    alert(errorMessage);
     console.log(errorCode);
 
 });
@@ -161,12 +171,3 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
 });
 }
 
-
-const items = document.querySelectorAll(".accordion a");
-
-function toggleAccordion(){
-  this.classList.toggle('active');
-  this.nextElementSibling.classList.toggle('active');
-}
-
-items.forEach(item => item.addEventListener('click', toggleAccordion));

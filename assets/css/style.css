@@ -25,6 +25,17 @@
     font-style: normal;
 }
 
+@keyframes jump {
+    0% {
+        top: -8px;
+    }
+    50% {
+        top: 8px;
+    }
+    100% {
+        top: -8px;
+    }
+}
 
 a {
     cursor: pointer;
@@ -94,6 +105,16 @@ body {
     background-color: #fcfcf5;
 }
 
+#thank{
+    background-color: #fcfcf5;
+    position: fixed;
+}
+
+#thank .second, #thank .typed2{
+    margin-top: 100px;
+    font-size: 110px;
+}
+
 header {
     padding: 10px 0px 0px 0px;
 }
@@ -141,7 +162,9 @@ header {
 
 .arrow {
     color: orange;
+    position: relative;
     vertical-align: text-bottom;
+    animation: jump 1.5s infinite;
 }
 
 .circle {
@@ -318,13 +341,14 @@ ul {
 
 h1 {
     margin: 0 0 20px 0;
-    font-weight: 300;
+    font-weight: 600;
     font-size: 28px;
+    color: darkorange;
 }
 
 
-input[type="text"],
-input[type="password"] {
+.back input[type="text"],
+.back input[type="password"] {
     display: block;
     box-sizing: border-box;
     margin-bottom: 20px;
@@ -333,20 +357,19 @@ input[type="password"] {
     height: 10.5%;
     border: none;
     border-bottom: 1px solid darkorange;
-
     font-weight: 400;
     font-size: 15px;
     transition: 0.2s ease;
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus {
+.back input[type="text"]:focus,
+.back input[type="password"]:focus {
     border-bottom: 3px solid orange;
     color: orange;
     transition: 0.2s ease;
 }
 
-input[type="submit"] {
+.back input[type="submit"] {
     margin-top: 8%;
     padding: 4%;
     width: 100%;
@@ -362,14 +385,14 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-input[type="submit"]:hover,
-input[type="submit"]:focus {
+.back input[type="submit"]:hover,
+.back input[type="submit"]:focus {
     opacity: 0.8;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     transition: 0.1s ease;
 }
 
-input[type="submit"]:active {
+.back input[type="submit"]:active {
     opacity: 1;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
     transition: 0.1s ease;
@@ -433,6 +456,10 @@ button.social-signin.google {
 }
 
 
+
+
+
+
 @media screen and (max-width: 1420px) {
 
     .login-box {
@@ -485,7 +512,7 @@ button.social-signin.google {
         color: white !important;
         display: block;
     }
-    input[type="submit"] {
+    .back input[type="submit"] {
         padding: 2%;
     }
     img {
@@ -565,6 +592,22 @@ button.social-signin.google {
         margin-left: 0;
     }
 
+    #faq h2,
+    #how h2,
+    dd,
+    #faq .content,
+    .accordion > .accordion-item > a,
+    .accordion .accordion-item > a::after {
+        color: white !important;
+        border-color: black !imprtant;
+    }
+   
+    .accordion {
+        padding: 0 !important;
+        margin-top: 20px;
+    }
+
+
 
 }
 
@@ -581,6 +624,11 @@ button.social-signin.google {
         margin-left: auto;
         margin-right: auto;
     }
+    
+    #how h2{
+        margin-top: 25px !important;
+        font-size: 35px !important;
+    }
 
 
 }
@@ -592,7 +640,6 @@ button.social-signin.google {
         font-size: 27px !important;
         color: white;
     }
-
 
     h2 {
         font-size: 36px !important;
@@ -632,13 +679,14 @@ button.social-signin.google {
         font-size: 40px !important;
     }
 
-    input[type="text"],
-    input[type="password"] {
+    .back input[type="text"],
+    .back input[type="password"] {
         width: 92%;
         height: 9%;
         padding: 4%;
         font-size: 13px !important;
-        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
         font-weight: 300;
     }
     h1 {
@@ -652,11 +700,28 @@ button.social-signin.google {
     }
 
     button.social-signin,
-    input[type="submit"] {
+    .back input[type="submit"] {
         width: 85%;
         padding: 2%;
         font-weight: 600;
     }
+     .accordion a::after {
+        font-size: 15px !important;
+        width: 26px !important;
+        height: 26px !important;
+    }
+    .accordion a{
+        font-size: 16px !important;
+    }
+    dt{
+        font-size: 30px !important;
+        width: 100% !important;
+        display: block;
+    }
+    dd{font-size: 20px;}
+     dl{
+    padding: 18px !important;
+    text-align: center;}
 }
 
 @media screen and (max-width: 575px) {
@@ -684,7 +749,7 @@ button.social-signin.google {
 
 
     h2 {
-        font-size: 30px !important;
+        font-size: 32px !important;
     }
 
     .typed1 {
@@ -702,7 +767,7 @@ button.social-signin.google {
         font-size: 45px !important;
     }
     button.social-signin,
-    input[type="submit"] {
+    .back input[type="submit"] {
         width: 90%;
 
     }
