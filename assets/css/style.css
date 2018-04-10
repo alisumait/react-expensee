@@ -497,6 +497,14 @@ button.social-signin.google {
         right: -95px;
         margin-top: 17%;
     }
+    
+    #thank .typed2{
+    margin-top: 30px !important;
+    font-size: 80px !important;
+}
+    .jumbo > .dot{
+        display: none !important;
+    }
 
 
 }
