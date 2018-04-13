@@ -1,0 +1,256 @@
+ 
+
+ .container-fluid {
+    background: linear-gradient(135deg, rgba(255, 174, 39, 1) 0%, rgba(222, 73, 109, 1) 100%);
+}  
+
+
+
+.main{
+background: ; 
+margin-left: 10 px ; 
+padding: 5px ;
+
+
+   }
+
+   #panel{
+   	background: rgb(100, 184, 220); 
+   	width: 20cm; 
+   	border-color: red ;
+   	border-radius: 5px;
+   	margin-top: 2cm;
+   	margin-left:  2cm;    
+   }
+
+   .textbox{
+		background: rgb(237, 243, 246);
+		color: black ; 
+		width: 11cm; 
+		padding:2px;
+		border-color: blue; 
+		border-radius: 5px;
+		font-size: 18px; 
+		height: 1cm;
+		font-weight: bold; 
+		font-family: Averta-Bold;
+
+
+   }
+
+   .label{
+   	color: white; 
+   	font-size: 16px; 
+   	padding: 5px; 
+   	margin:5px; 
+
+   }
+  
+   #btn{
+   		
+		color: white ; 
+		width: 8cm; 
+		height: 1cm; 
+		padding:2px;
+		margin-left: 3cm;
+		border-color: red; 
+		border-radius: 5px;
+		margin-top: 5cm;
+		font-size: 17px;
+   }
+
+
+h1 { 
+	color: gold; 
+	font-weight: 32px; 
+	text-align: left; 
+	padding-top: 1cm; 
+
+}
+.row{
+
+}
+.Tcell{
+	margin-left:4cm;
+	padding-right: 2px;  
+}
+
+
+#income{
+	background: lightgray;
+}
+
+
+#password{
+	margin-left: 
+}
+
+   #btn{
+   	margin-left: 5cm; 
+   	margin: 2cm; 
+   }
+
+
+   form{
+   	border-color: white; 
+
+   }
+
+
+
+
+
+} 
+
+
+
+
+
+input.button{
+	border-color: red; 
+	margin-left: 7px ;
+}
+.hiden{
+	visibility:hidden;
+}
+
+	 .img {
+    margin-top: 15px !important;
+    width: 4cm;
+    height: 4cm; 
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/*button */
+#save{
+	margin-top: 3cm; 
+	margin-left: 3cm;
+	background: green; 
+	color: while;
+	border-color: white; 
+}
+
+@media screen and (max-width: 1080px) {
+
+    .img {
+        height: auto !important;
+    }
+   .carousel > h1 {
+        font-size: 45px !important;
+    }
+    h1 {
+        font-size: 35px !important;
+    }
+    .mission {
+        font-size: 22px !important;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+        background: ivory !important;
+    }
+    .dot {
+        color: orange;
+    }
+    .sign {
+        color: black !important;
+    }
+    h2 {
+        font-size: 33px !important;
+    }
+    .mission {
+        font-size: 21px !important;
+    }
+
+}
+
+@media screen and (max-width: 720px) {
+
+   .carousel > h1 {
+        font-size: 35px !important;
+    }
+    h2 {
+        font-size: 30px !important;
+    }
+    .mission {
+        font-size: 18px !important;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .carousel > h1 {
+        font-size: 30px !important;
+    }
+    h2 {
+        font-size: 25px !important;
+    }
+    .mission {
+        font-size: 16px !important;
+    }
+
+}
+
+.profile-pic {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    vertical-align: middle;
+    text-align: center;
+    color: transparent;
+    transition: all .3s ease;
+    text-decoration: none;
+}
+
+
+@font-face {
+    font-family: "Averta";
+    src: url("../fonts/Averta-Light.woff") format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Averta";
+    src: url("../fonts/Averta-Bold.woff") format('woff');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Averta";
+    src: url("../fonts/Averta-Semibold.woff") format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Averta";
+    src: url("../fonts/Averta-Regular.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes jump {
+    0% {
+        top: -8px;
+    }
+    50% {
+        top: 8px;
+    }
+    100% {
+        top: -8px;
+    }
+}
+
+
+
