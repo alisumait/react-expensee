@@ -49,11 +49,17 @@ div.item > p > span {
     margin: auto;
     margin-bottom: 9px;
     width: 70%;
-    font-size: 1.3em;
+    font-size: 1.25em;
+    line-height: 1.3;
     color: #222;
     display: block;
     background-color: #eed;
     border-radius: 7px;
+}
+
+.days{
+    font-size: .9em;
+    color: dimgray;
 }
 
 .note > .row {
@@ -159,6 +165,11 @@ div.item > p > span {
     margin-left: 60px;
 }
 
+.back .btn{
+    margin-left: 0 !important;
+    margin-top: 5% !important;
+}
+
 #from,
 #to {
     border: solid 1px #FF512F;
@@ -196,15 +207,28 @@ label {
     padding-right: 56px !important;
 }
 
-.goalwrapper span {
-    margin-bottom: 40px;
-}
 
 .goalwrapper > .note {
     width: 100%;
     vertical-align: middle;
     border: 2px solid black;
     height: 70px;
-    margin-bottom: 0;
+    margin-bottom: 9px;;
     background-color: white;
+}
+
+
+.center > .goalpop > h1{
+    text-align: center;
+    box-sizing: border-box;
+    padding: 5%;
+}
+
+
+.center > .goalpop > p{
+    text-align: center;
+    line-height: .9;
+}
+.goalpop > .datewrapper{
+    width: inherit;
 }

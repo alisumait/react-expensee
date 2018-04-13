@@ -27,7 +27,58 @@
     <!-- END Screen Frame -->
 
     <div class="container-fluid">
+        
+        <div id="gl-one" class="back">
+            <div class="login-box animate">
+                <div class="row center">
+                    <div class="col-12 goalpop">
+                    <h1>Buy a new Car!</h1>
+                        <p>What you need to do: If you followed the plan,</p>
+                        <p>You need to save <strong>RM 42</strong> everyday for the remaining 154 Days.</p>
+                        <hr style="background-color: orange; margin-top: 20px;">
+                    
+                    <div class="datewrapper">
+                        <div class="input-append date form_datetime" id="extend">
+                            <label for="extra">Extend the Timeline: </label>
+                            <input size="16" type="text" id="extra" value="" readonly>
+                            <span class="add-on"><i class="icon-th"></i></span>
 
+                        </div>
+                        <input type="submit" class="btn btn-primary" value="EXTEND">
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="gl-two" class="back">
+            <div class="login-box animate">
+                <div class="row center">
+                    <div class="col-12 goalpop">
+                        <h1>Travel to a Country</h1>
+                        <p>What you need to do: If you followed the plan,</p>
+                        <p>You need to save <strong>RM 13</strong> everyday for the remaining 42 Days.</p>
+                        <hr style="background-color: orange; margin-top: 20px;">
+                    
+                    <div class="datewrapper">
+                        <div class="input-append date form_datetime" id="extend1">
+                            <label for="extra1">Extend the Timeline: </label>
+                            <input size="16" type="text" id="extra1" value="" readonly>
+                            <span class="add-on"><i class="icon-th"></i></span>
+
+                        </div>
+                        <input type="submit" class="btn btn-primary" value="EXTEND">
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        
+        
+        
+        
         <!-- START Header Row -->
         <div class="row">
             <div class="col"></div>
@@ -80,24 +131,24 @@
                 <form>
                     <input type="text" class="info" placeholder="Your Goal">
                     <input type="number" class="info" placeholder="How Much It Cost?">
-                    <input type="number" class="info" placeholder="How Much You Have?">
-<div class="datewrapper">
-                    <div class="input-append date form_datetime" id="first">
-                        <label for="from">From: </label>
-                        <input size="16" type="text" id="from" value="" readonly>
+                    <input type="number" class="info" placeholder="Your Monthly Income?">
+                    <div class="datewrapper">
+                        <div class="input-append date form_datetime" id="first">
+                            <label for="from">From: </label>
+                            <input size="16" type="text" id="from" value="" readonly>
 
-                        <span class="add-on"><i class="icon-th"></i></span>
+                            <span class="add-on"><i class="icon-th"></i></span>
 
-                    </div>
+                        </div>
 
-                    <div class="input-append date form_datetime" id="sec">
-                        <label for="to">To: </label>
-                        <input size="16" type="text" id="to" value="" readonly>
-                        <span class="add-on"><i class="icon-th"></i></span>
-                    </div>
-    
+                        <div class="input-append date form_datetime" id="sec">
+                            <label for="to">To: </label>
+                            <input size="16" type="text" id="to" value="" readonly>
+                            <span class="add-on"><i class="icon-th"></i></span>
+                        </div>
+
                         <input type="submit" class="btn btn-primary" value="Add">
-    </div>
+                    </div>
                 </form>
 
             </div>
@@ -110,23 +161,41 @@
         <div class="row">
             <div class="col-1"></div>
             <div class="col-sm-6 col-12 goalwrapper">
-                <div class="note noteone">
+                <a onclick="document.getElementById('gl-one').style.display='block'" class="note noteone">
                     <span class="closebtn one">&times;</span>
                     <div class="row">
-
-                        <div class="col-12">
+                        <div class="col-8">
                             <span>Buy a new Car!</span>
+                        </div>
+                        <div class="col-4">
+                            <span class="days">154 Days left</span>
+                        </div>
+
+                    </div>
+                </a>
+
+                <a onclick="document.getElementById('gl-two').style.display='block'" class="note notetwo">
+                    <span class="closebtn two">&times;</span>
+                    <div class="row">
+
+                        <div class="col-8">
+                            <span>Travel to a Country</span>
+                        </div>
+                        <div class="col-4">
+                            <span class="days">42 Days left</span>
                         </div>
 
 
                     </div>
-                    <div class="gl"></div>
-                    <div class="gl"></div>
-                </div>
+                </a>
+
+
                 <div class="col"></div>
             </div>
 
         </div>
+        
+    </div>
 
         <!-- START Scripts -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -153,7 +222,20 @@
                 pickerPosition: "bottom",
                 minView: 2
             });
-
+             $("#extend").datetimepicker({
+                format: "dd MM yyyy",
+                autoclose: true,
+                todayBtn: true,
+                pickerPosition: "bottom",
+                minView: 2
+            });
+            $("#extend1").datetimepicker({
+                format: "dd MM yyyy",
+                autoclose: true,
+                todayBtn: true,
+                pickerPosition: "bottom",
+                minView: 2
+            });
         </script>
 
 
@@ -193,6 +275,17 @@
 
             });
 
+            var goalone = document.getElementById('gl-one');
+            var goaltwo = document.getElementById('gl-two');
+
+            window.onclick = function(event) {
+                if (event.target == goalone) {
+                    goalone.style.display = "none";
+                }
+                if (event.target == goaltwo) {
+                    goaltwo.style.display = "none";
+                }
+            }
         </script>
         <!-- END Scripts -->
 

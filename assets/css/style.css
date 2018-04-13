@@ -558,8 +558,9 @@ button.social-signin.google {
     .sign {
         color: white !important;
     }
-    .circle {
-        display: none;
+    .circle,
+    .goalpic{
+        display: none !important;
         max-width: 0px !important;
     }
     body {
