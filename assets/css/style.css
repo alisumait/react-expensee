@@ -58,27 +58,6 @@ body {
     display: inline-block;
     float: right;
 }
-.dropdown menu-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
-    text-align: left;
-
-}
-.dropdown-item
-{
-    float: right;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-
-}
 .dropdown menu:hover .dropdown menu-content {
     display: block;
     float: right;
@@ -593,11 +572,12 @@ button.social-signin.google {
     .sign {
         color: white !important;
     }
-    .circle {
-        display: none;
+    .circle,
+    .goalpic{
+        display: none !important;
         max-width: 0px !important;
     }
-    .container-fluid {
+    body {
         background: linear-gradient(135deg, rgba(255, 174, 39, 1) 0%, rgba(222, 73, 109, 1) 100%);
         padding: 8px;
     }
