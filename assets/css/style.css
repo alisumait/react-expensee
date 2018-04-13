@@ -283,7 +283,6 @@ footer {
     font-weight: 600;
     margin-top: 80px !important;
     background-color: #f9f9f5;
-    position: absolute;
     bottom: 0;
     width: 100%;
 }
@@ -563,7 +562,7 @@ button.social-signin.google {
         display: none;
         max-width: 0px !important;
     }
-    .container-fluid {
+    body {
         background: linear-gradient(135deg, rgba(255, 174, 39, 1) 0%, rgba(222, 73, 109, 1) 100%);
         padding: 8px;
     }
