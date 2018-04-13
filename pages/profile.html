@@ -30,22 +30,48 @@
 
 <body class="container-fluid" id="profile">
                 
+<div class="contatiner">
 
 
-                 <!-- START Header Row -->
+          <!-- START Header Row -->
+           <!-- START Header Row -->
         <div class="row">
             <div class="col"></div>
             <div class="col-md-8 col-sm-10 col-12">
 
                 <header>
 
-                    <a class="logo" href="../index.html">expensee<p class="dot">.</p></a>
-                    <a class="sign" onclick="document.getElementById('sign-in').style.display='block'" style="float: right;">Sign in</a>
-                    <a class="sign" onclick="document.getElementById('sign-wrapper').style.display='block'" style="float: right;">Join Us</a>
+                    <a class="logo" href="main.html">expensee<p class="dot">.</p></a>
 
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link text" href="main.html">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link text" href="goals.html">Goals</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text" href="reports.html">Reports</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img src="../assets/img/profile.png">
+        </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="profile.html">My profile</a>
+                                        <a class="dropdown-item" href="settings.html">Settings</a>
+                                        <a class="dropdown-item" onclick="toggleSignOut()">Log out</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
                 </header>
-
-
 
 <div class="main" >
         
@@ -58,7 +84,7 @@
 
              <tr class="row">
                   <dt class="Tcell">
-                   <marquee direction="right" scrollamount= "4" ><h1>My Profile </h1></marquee>  
+                    <h1 align="center">My Profile </h1>  
                   </dt>
 
 
@@ -66,9 +92,10 @@
               </tr>
 
                     <!-- profile image  -->
+
               <tr class="row">
                   <dt class="Tcell">
-                     <input type="image" alt="User Pic"  src="../assets/img/icons/prof.png" id="profImage" class="img">
+                     <input type="image" alt="User Pic" id="img" src="../assets/img/icons/prof.png" id="profImage" class="img">
                   </dt>
 
 
@@ -186,21 +213,12 @@
         <!-- END FOOTER -->
 
 
+</div>
 
 
 
 
 
-
-
-
-    <script>
-              $(function() {
-    $('#profImage').on('click', function() {
-        $('#profImage-upload').click();
-    });
-});       
-              </script> 
        
 
 
