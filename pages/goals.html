@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- START Head Tags, Fonts, Styles -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../assets/boostrap/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="../assets/boostrap/css/bootstrap-grid.min.css">
+    <link type="text/css" rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="../assets/css/main.css">
+    <link type="text/css" rel="stylesheet" href="../assets/css/bootstrap-datetimepicker.min.css">
+    
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <title>Expensee | Goals</title>
+</head>
+<!-- END Head -->
+
+<body>
+
+    <!-- START 4 Screen Black Frame -->
+    <div id="left"></div>
+    <div id="right"></div>
+    <div id="top"></div>
+    <div id="bottom"></div>
+    <!-- END Screen Frame -->
+
+    <div class="container-fluid">
+
+        <!-- START Header Row -->
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-md-8 col-sm-10 col-12">
+
+                <header>
+
+                    <a class="logo" href="main.html">expensee<p class="dot">.</p></a>
+
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link text" href="main.html">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link text" href="goals.html">Goals</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text" href="reports.html">Reports</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img src="../assets/img/profile.png">
+        </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="profile.html">My profile</a>
+                                        <a class="dropdown-item" href="settings.html">Settings</a>
+                                        <a class="dropdown-item" onclick="toggleSignOut()">Log out</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </header>
+
+            </div>
+            <div class="col"></div>
+
+        </div>
+        <!-- END Header Row -->
+
+
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-sm-10 col-12 goaladder">
+                <form>
+                    <input type="text" class="info" placeholder="Your Goal">
+                    <input type="number" class="info" placeholder="How Much It Cost?">
+                    <input type="number" class="info" placeholder="How Much You Have?">
+
+                    <div class="input-append date form_datetime" id="datetimepicker">
+                        <label for="datepicker">From: </label>
+                        <input size="16" type="text" id="from" value="" readonly>
+                        <label for="datepicker">To: </label>
+                        <input size="16" type="text" id="to" value="" readonly>
+                        <span class="add-on"><i class="icon-th"></i></span>
+                                            <input type="submit" class="btn btn-primary" value="Add">
+
+                    </div>
+                                 </form>
+
+            </div>
+            <div class="col-1"></div>
+        </div>
+
+        <img src="../assets/img/goal.png" class="goalpic">
+
+
+        <div class="row">
+        <div class="col-1"></div>
+        <div class="col-sm-6 col-12 goalwrapper">
+             <div class="note noteone">
+                        <span class="closebtn one">&times;</span>
+                        <div class="row">
+
+                            <div class="col-12 left">
+                                <span>Buy a new Car!</span>
+                            </div>
+                        
+
+                    </div>
+            <div class="gl"></div>
+            <div class="gl"></div>
+            </div>
+        <div class="col"></div>
+        </div>
+
+    </div>
+
+    <!-- START Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="../assets/boostrap/js/bootstrap.min.js"></script>
+    <script src="../assets/boostrap/js/"></script>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+    <script type="text/javascript" src="../assets/javascript/bootstrap-datetimepicker.min.js"></script>
+
+
+    <script type="text/javascript">
+        $("#datetimepicker").datetimepicker({
+            format: "dd MM yyyy",
+            autoclose: true,
+            todayBtn: true,
+            pickerPosition: "bottom",
+            minView: 2
+        });
+    </script>
+
+
+    <script type="text/javascript">
+        $('.one').click(function() {
+            $('.noteone').hide();
+            var amount = parseInt($('#amount').text());
+
+            var oneval = parseInt($('#oneval').text());
+            $('#amount').text(amount - oneval);
+
+        });
+        $('.two').click(function() {
+            $('.notetwo').hide();
+            var amount = parseInt($('#amount').text());
+
+            var twoval = parseInt($('#twoval').text());
+
+            $('#amount').text(amount - twoval);
+        });
+        $('.three').click(function() {
+            $('.notethree').hide();
+            var amount = parseInt($('#amount').text());
+
+            var threeval = parseInt($('#threeval').text());
+
+            $('#amount').text(amount - threeval);
+
+        });
+        $('.four').click(function() {
+            $('.notefour').hide();
+            var amount = parseInt($('#amount').text());
+
+            var fourval = parseInt($('#fourval').text());
+
+            $('#amount').text(amount - fourval);
+
+        });
+    </script>
+    <!-- END Scripts -->
+
+</body>
+
+</html>

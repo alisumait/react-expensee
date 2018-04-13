@@ -18,6 +18,7 @@ var config = {
     messagingSenderId: "111814420112"
 };
 firebase.initializeApp(config);
+this.database = firebase.database().ref().child('users');
 
 
 function handleSignUp() {
@@ -40,8 +41,12 @@ function handleSignUp() {
     // Sign in with email and pass.
     // [START createwithemail]
     firebase.auth().createUserWithEmailAndPassword(email, password).then(function(user) {
+        
+        
     var user = firebase.auth().currentUser;
-    
+        
+    this.database.push().set({userEmail: user.email});
+        
        location.href="pages/thank.html";
         
 }, function(error) {
@@ -55,14 +60,13 @@ function handleSignUp() {
 
     // [END createwithemail]
 }
-function toggleSignOut() {
 
+function toggleSignOut() {
 
 if (firebase.auth().currentUser) {
         // [START signout]
         firebase.auth().signOut();
-alert(".....................");     
-       location.href = "index.html";
+       location.href = "../index.html";
 }
  } 
  
@@ -82,9 +86,8 @@ function toggleSignIn() {
         // [START authwithemail]
         firebase.auth().signInWithEmailAndPassword(email, password).then(function(user) {
     var user = firebase.auth().currentUser;
-    alert("!!!!!!!!!!!!!!!!!!!!");     
-
-       location.href = "logout.html";
+            
+       location.href = "pages/main.html";
         
 }, function(error) {
           // Handle Errors here.
