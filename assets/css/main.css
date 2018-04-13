@@ -14,6 +14,10 @@
     margin: auto!important;
 }
 
+.dropdown-menu{
+    z-index: 50;
+}
+
 .note > .row > .left {
     text-align: left;
 }
@@ -144,7 +148,7 @@ div.item > p > span {
 
 .info {
     border: solid 1px #FF512F;
-    width: 18%;
+    width: 32%;
     height: 40px;
     font-size: 16px;
     padding: 8px;
@@ -199,6 +203,10 @@ label {
 .goaladder {
     text-align: left;
     margin-top: 40px !important;
+}
+
+.goaladder > form{
+    width: 70%;
 }
 
 .goalwrapper {
