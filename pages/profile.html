@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- START Head Tags, Fonts, Styles -->
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../assets/boostrap/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="../assets/boostrap/css/bootstrap-grid.min.css">
+    <link type="text/css" rel="stylesheet" href="../assets/css/style.css">
+    <link type="text/css" rel="stylesheet" href="../assets/css/contact.css">
+    <link type="text/css" rel="stylesheet" href="../assets/css/faq.css">
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+
+
+    <link type="text/css" rel="stylesheet" href="../assets/css/profile.css">
+    <script type="text/javascript" src="../assets/javascript/app.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    
+    <!-- Include the above in your HEAD tag -->
+
+
+    <title>My Profile</title>
+
+</head>
+
+
+<body class="container-fluid" id="profile">
+                
+
+
+                  <header>
+
+                  <!-- Mutqi is maling the header  -->
+                    <a class="logo" href="../index.html">expensee<p class="dot">.</p></a>
+
+
+                   </header>
+
+
+<div class="main" >
+        
+                     
+    <div class="panel panel-danger" id="panel" >
+
+
+
+          <table>
+
+             <tr class="row">
+                  <dt class="Tcell">
+                   <marquee direction="right" scrollamount= "4" ><h1>My Profile </h1></marquee>  
+                  </dt>
+
+
+
+              </tr>
+
+                    <!-- profile image  -->
+              <tr class="row">
+                  <dt class="Tcell">
+                     <input type="image" alt="User Pic"  src="../assets/img/icons/prof.png" id="profImage" class="img">
+                  </dt>
+
+
+
+              </tr>
+
+
+
+            <rt class="row">
+                <dt class="Tcell"><label class="label" for="name">Name </label></dt>   
+                <dt class="Tcell"><input type="text" class="textbox" name="name" id="name"></dt>
+                
+            </rt>
+
+
+            <rt class="row">
+              
+                <dt class="Tcell">
+                    <label class="label" for ="email">E-mail</label>
+                </dt class="Tcell">
+                <dt class="Tcell"> <input type="text" class="textbox" name="email"  id="email" /></dt>
+            </rt>
+
+
+            <rt class="row">
+              
+                <dt class="Tcell">
+                     <label class="label"  for="password">Password</label>
+                </dt class="Tcell">
+              
+                <dt class="Tcell"><input type="textbox" class="textbox" name="password"   id="password" /> </dt>
+            </rt>
+
+
+              <rt class="row">
+              
+                <dt class="Tcell">
+                     <label class="label"  for="name">Income </label>
+                </dt>
+              
+                <dt class="Tcell"><input type="textbox"  class="textbox" name="name" id="income" ></dt>
+            </rt>
+
+            <rt class="row">
+              <dt class="Tcell">
+                
+                 <input type="submit"  id="btn" class="btn btn-danger navbar-btn" name="signup_submit" value="Save" onclick="function()" />
+              </dt>
+
+            </rt>
+
+
+
+          </table>
+                       
+                    
+                  
+  
+  
+
+       
+
+
+    
+       </div>
+         </div>
+     
+                                  
+
+
+
+
+
+
+
+
+
+
+ <!-- START FOOTER -->
+
+        <footer class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-3 col-12">
+                <ul style="list-style: none" class="contact">
+                    <h4>Expensee</h4>
+                    <hr>
+                    <li>128, Jalan Genting Klang,</li>
+                    <li>53300 Kuala Lumpur, Malaysia</li>
+                    <li><a href="mailto:expenseeapp@gmail.com">expenseeapp@gmail.com</a></li>
+                    <li>+60175562049</li>
+
+                </ul>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2 col-12">
+                <ul style="list-style: none">
+                    <h4>About Us</h4>
+                    <hr>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="how.html">How it Works?</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-12">
+                <ul style="list-style: none">
+                    <h4>Social</h4>
+                    <hr>
+                    <li><a href="https://www.twitter.com/expenseeapp">Twitter</a></li>
+                    <li><a href="https://www.facebook.com/ali.app.353">Facebook</a></li>
+                    <li><a href="contact.html">Get in Touch</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2"></div>
+        </footer>
+        <!-- END FOOTER -->
+
+
+
+
+
+
+
+
+
+
+    <script>
+              $(function() {
+    $('#profImage').on('click', function() {
+        $('#profImage-upload').click();
+    });
+});       
+              </script> 
+       
+
+
+</body>
+
+</html>
