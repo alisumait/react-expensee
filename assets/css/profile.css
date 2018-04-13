@@ -1,21 +1,30 @@
- 
+  
 
  .container-fluid {
-    background: linear-gradient(135deg, rgba(255, 174, 39, 1) 0%, rgba(222, 73, 109, 1) 100%);
+    background:beige ;
 }  
 
 
 
 .main{
 background: ; 
-margin-left: 10 px ; 
 padding: 5px ;
+
 
 
    }
 
+body {
+    font-family: 'Averta';
+    height: 100%;
+    width: 100% !important;
+    overflow-x: hidden;
+    background-color: beige;
+
+}
+
    #panel{
-   	background: rgb(100, 184, 220); 
+   	background;
    	width: 20cm; 
    	border-color: red ;
    	border-radius: 5px;
@@ -23,15 +32,22 @@ padding: 5px ;
    	margin-left:  2cm;    
    }
 
+
+#img{
+  margin-left: 8cm;
+
+
+}
+
    .textbox{
 		background: rgb(237, 243, 246);
 		color: black ; 
-		width: 11cm; 
+		width: 20cm; 
 		padding:2px;
 		border-color: blue; 
 		border-radius: 5px;
 		font-size: 18px; 
-		height: 1cm;
+		height: 2cm;
 		font-weight: bold; 
 		font-family: Averta-Bold;
 
@@ -39,8 +55,8 @@ padding: 5px ;
    }
 
    .label{
-   	color: white; 
-   	font-size: 16px; 
+   	color: Orange; 
+   	font-size: 20px; 
    	padding: 5px; 
    	margin:5px; 
 
@@ -49,19 +65,22 @@ padding: 5px ;
    #btn{
    		
 		color: white ; 
-		width: 8cm; 
-		height: 1cm; 
+		width: 15cm; 
+		height: 2cm; 
 		padding:2px;
 		margin-left: 3cm;
 		border-color: red; 
 		border-radius: 5px;
 		margin-top: 5cm;
-		font-size: 17px;
+		font-size: 25px;
    }
 
 
 h1 { 
-	color: gold; 
+	color: black;
+  font-family: Averta-Bold;    
+  margin-left: 8cm; 
+  font-size: 45px ; 
 	font-weight: 32px; 
 	text-align: left; 
 	padding-top: 1cm; 
@@ -252,5 +271,8 @@ input.button{
     }
 }
 
+#container{
+  background: black; 
+} 
 
 
