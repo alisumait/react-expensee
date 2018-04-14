@@ -53,11 +53,13 @@ body {
     background-color: #fcfcf5;
 
 }
+
 .dropdown menu {
     position: relative;
     display: inline-block;
     float: right;
 }
+
 .dropdown menu:hover .dropdown menu-content {
     display: block;
     float: right;
@@ -157,7 +159,7 @@ header > nav {
     margin-top: 20px;
     font-weight: 300;
     font-size: 15px;
-    text-align: right ;
+    text-align: right;
 }
 
 a > img {
@@ -572,7 +574,7 @@ button.social-signin.google {
         color: white !important;
     }
     .circle,
-    .goalpic{
+    .goalpic {
         display: none !important;
         max-width: 0px !important;
     }
