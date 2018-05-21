@@ -1,0 +1,19 @@
+#header [class*="col-"],
+#header .row {
+    margin: unset !important;
+    z-index: 1;
+}
+
+#header .dropdown-menu {
+    z-index: 500;
+}
+
+
+#header .btn {
+    margin-left: 60px;
+}
+
+
+#header label {
+    margin-right: 15px;
+}

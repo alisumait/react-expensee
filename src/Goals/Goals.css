@@ -1,0 +1,59 @@
+#Goals [class*="col-"],
+#Goals .row {
+    margin: unset !important;
+    z-index: auto !important;
+}
+
+#Goals input[type="text"],
+#Goals input[type="number"], #Goals .btn{
+    border: solid 1px #cccccc;
+    vertical-align: middle;
+    height: 40px;
+    font-size: 16px;
+    margin: 4px;
+    line-height: normal;
+    padding: 8px;
+    border-radius: 6px;
+}
+#Goals input[type="text"]{
+    width: 40%;
+}
+#Goals input[type="number"]{
+    width: 40%;
+}
+
+#Goals .btn {
+    margin-left: 60px;
+}
+
+#Goals .back .btn {
+    margin-left: 0 !important;
+    margin-top: 5% !important;
+}
+
+#Goals label {
+    margin-right: 15px;
+    margin-top: auto;
+    margin-left: 19px;
+}
+
+#Goals .goalpic {
+    position: fixed;
+    top: 0;
+    padding: 0;
+    margin-top: 15%;
+    right: -85px;
+    z-index: 50;
+    overflow: hidden;
+    height: 650px;
+}
+
+
+#Goals .goaladder {
+    text-align: left;
+    margin-top: 40px !important;
+}
+
+#Goals .goaladder > form {
+    width: 65%;
+}

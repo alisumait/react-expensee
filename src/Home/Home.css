@@ -1,0 +1,53 @@
+#Home [class*="col-"],
+#Home .row {
+    margin: unset !important;
+    z-index: 1;
+}
+
+#Home .count {
+    font-size: 80px !important;
+    font-weight: bold;
+    padding-right: 20px;
+    vertical-align: middle;
+}
+
+#Home .amount-box {
+    width: 35%;
+    height: 35%;
+    background: #FFF;
+    border-radius: 3px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 50;
+}
+
+#Home .login-box > .center {
+    margin: auto;
+    height: 100%;
+}
+
+#Home h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#Home .center{
+    height: 100%
+}
+
+#Home .centered{
+    margin: auto !important;
+    display: block;
+}

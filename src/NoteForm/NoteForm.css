@@ -1,0 +1,71 @@
+#NoteForm [class*="col-"],
+#NoteForm .row {
+    margin: unset !important;
+    z-index: 1;
+}
+
+#NoteForm .dropdown-menu {
+    z-index: 500;
+}
+
+#NoteForm .days {
+    font-size: .9em;
+    color: dimgray;
+}
+
+#NoteForm .btn {
+    vertical-align: top;
+}
+
+#NoteForm .adder {
+    background-color: darkorange;
+    height: 50px;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#NoteForm .form-control {
+    width: 14%;
+    display: inline;
+}
+
+#NoteForm .centered > form {
+    overflow: hidden;
+    margin: auto;
+    text-align: center;
+    margin-top: 3px;
+    padding-right: 22px !important;
+}
+
+#NoteForm .centered input[type="text"],
+#NoteForm .centered input[type="number"], 
+#NoteForm .btn, 
+#NoteForm select{
+    border: solid 1px orange;
+    vertical-align: top;
+    height: 40px;
+    font-size: 16px;
+    margin: 2px;
+    padding: 8px;
+    border-radius: 6px;
+}
+#NoteForm .centered input[type="text"]{
+    width: 22%;
+}
+#NoteForm .centered input[type="number"]{
+    width: 15%;
+}
+#NoteForm form > div{
+    display: inline;
+}
+
+#NoteForm .react-datepicker-wrapper{
+    width: 18%;
+    margin-left: 5px;
+}
+
+#NoteForm .datepicker{
+    width: 100% !important;
+}
