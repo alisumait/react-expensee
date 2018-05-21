@@ -371,7 +371,7 @@ null)
     
 if(noty) {
             noteState = (
-            <h1 style={{textAlign: 'center', color: '#00c4ff', marginRight: '33px', fontWeight: '300'}}>You have no expenses this today. Yet!</h1>
+            <h1 style={{textAlign: 'center', color: '#00c4ff', marginRight: '33px', fontWeight: '300'}}>You didn't spend anything on this day.</h1>
             )
         }
 
