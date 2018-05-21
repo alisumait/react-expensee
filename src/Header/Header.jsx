@@ -62,7 +62,6 @@ class Header extends Component {
           <img src={this.props.profileimg || Profile}></img>
         </a>
                                     <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <Link className="dropdown-item" to="/mainpage/profile">My profile</Link>
                                         <Link className="dropdown-item" to="/mainpage/settings">Settings</Link>
                                         <Link to="/" className="dropdown-item" onClick={() => this.toggleSignOut()}>Log out</Link>
                                     </div>
