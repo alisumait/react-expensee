@@ -230,6 +230,11 @@ class App extends Component {
         <Switch>
        <Route exact strict path="/" render={
             ()=> {
+        if(this.state.loading == false){
+            return(
+            <Redirect to="/mainpage"/>
+            )
+        }
             var getUser  =   this.getUser;
                 return(
                     <body>
