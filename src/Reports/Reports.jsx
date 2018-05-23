@@ -1,66 +1,202 @@
 import React, { Component } from 'react';
 import {Pie} from 'react-chartjs-2';
-import firebase, {auth, database} from '../firebase.js';
+import { defaults } from 'react-chartjs-2'
+import {CSVLink, CSVDownload} from 'react-csv';
+import firebase, {database} from '../firebase.js';
+import './reports.css'
 
-
-class Note extends Component{
+class Reports extends Component{
 
     constructor(props){
         super(props);
 
         this.database = database;
+        this.handleCat = this.handleCat.bind(this);
+        this.writeNote = this.writeNote.bind(this);
+
+        this.state = {
+            foodPrice: this.props.foodPrice,
+            transportationPrice: this.props.transportationPrice,
+            utilitiesPrice: this.props.utilitiesPrice,
+            stationaryPrice: this.props.stationaryPrice,
+            otherPrice: this.props.otherPrice,
+            month: '',
+            csvData: null
+        }
     }
-  
-    componentWillMount(){
-        var catr = this.props.cats;
-        var result = catr.map(a => a.category);
+
+componentWillReceiveProps(nextProps) {
+  this.setState({ 
+      foodPrice: nextProps.foodPrice,
+      transportationPrice: nextProps.transportationPrice,
+      utilitiesPrice: nextProps.utilitiesPrice,
+      stationaryPrice: nextProps.stationaryPrice,
+      otherPrice: nextProps.otherPrice,
+  });  
+}
+
+    static defaultProps = {
+    displayTitle:true,
+    displayLegend: true,
+    legendPosition:'center'
+  }
+
+    handleCat(e){
+        this.setState({
+            month: e.target.value,
+        })
         
-        alert(JSON.stringify(result));
-        console.log(catr);
-const data = {
-	labels: [
-		'Red',
-		'Green',
-		'Yellow'
-	],
-	datasets: [{
-		data: [300, 50, 100],
-		backgroundColor: [
-		'#FF6384',
-		'#36A2EB',
-		'#FFCE56'
-		],
-		hoverBackgroundColor: [
-		'#FF6384',
-		'#36A2EB',
-		'#FFCE56'
-		]
-	}]
-};
+    }
+    writeNote(){
+        this.setState({
+            foodPrice: 0,
+            transportationPrice: 0,
+            utilitiesPrice: 0,
+            stationaryPrice: 0,
+            otherPrice: 0,
+        })
+    this.props.getChart(this.state.month);
     }
 
-  
-  
+    render(){ 
+    var csvData = [];
+      var that = this;
+      this.props.expenses.map((name, index) => {
+          console.log(name.expense);
+        if(index == 0){
+            csvData.push(
+            ["Expense", "Category", "Price","Date"]
+            )
+          }
+          else
+          csvData.push(
+    
+            [name.expense, that.props.cats[index].category ,that.props.prices[index].price, name.day+'/'+name.month]
+      )
+      });
+      this.state.csvData = csvData;
+        
+        defaults.global.defaultFontFamily = 'Averta'
 
-
-    render(){
+        var chart = {
+        labels: ['Food', 'Transportation', 'Utilities', 'Stationary', 'Other'],
+        datasets:[
+          {
+            label:'Expenses',
+            data:[
+              this.state.foodPrice,
+              this.state.transportationPrice,
+              this.state.utilitiesPrice,
+              this.state.stationaryPrice,
+              this.state.otherPrice
+            ],
+            backgroundColor:[
+              'rgba(255, 99, 132, 0.7)',
+              'rgba(54, 162, 235, 0.7)',
+              'rgba(255, 202, 70, 0.7)',
+              'rgba(0, 0, 0, 0.6)',
+              'rgba(153, 102, 255, 0.7)'
+            ]
+          }
+        ]
+        };
         return(
-            
-        <a onClick={this.displayblocks} class="note noteone">
-                    <span class="closebtn one">&times;</span>
-                    <div class="row">
-                        <div class="col-8">
-                            <span>Buy a new Car!</span>
+            <div id="Reports" className="row">
+                
+                <div className="col-6">
+                    <div className="row">
+                        <div className="col"></div>
+                        <div className="col-8 selectors">
+                        <select value={this.state.month} onChange={this.handleCat}>
+                        <option value="" disabled selected>Months</option>
+                        <option value={1}>Jan</option>
+                        <option value={2}>Feb</option>
+                        <option value={3}>March</option>
+                        <option value={4}>Apr</option>
+                        <option value={5}>May</option>
+                        <option value={6}>June</option>
+                        <option value={7}>July</option>
+                        <option value={8}>August</option>
+                        <option value={9}>September</option>
+                        <option value={10}>October</option>
+                        <option value={11}>November</option>
+                        <option value={12}>December</option>
+                        </select>
+                        <input type="button" onClick={this.writeNote} className="btn btn-primary" value="Display"></input>
                         </div>
-                        <div class="col-4">
-                            <span class="days">154 Days left</span>
-                        </div>
-
+                        <div className="col"></div>
+                    
                     </div>
-                </a>
+                                            <hr></hr>
+
+                    <div className="selectors">
+                        <div className="row">
+                    <h4>Export all your records into an Excel sheet</h4>
+                            </div>
+                        <div className="row">
+                         
+                        <CSVLink className="ex" data={this.state.csvData} filename={"my-expenses.csv"}><input type="button" className="btn btn-warning" value="Export"></input>  </CSVLink>
+                            
+                        </div>
+                        
+                    </div>
+                
+                    </div>
+                
+                
+                <div className="chart col-6">   
+            <Pie
+          data={chart}
+          options={{
+            responsive: true,
+            maintainAspectRatio: false,
+            title:{
+              display:this.props.displayTitle,
+              text:'Expenses, For The Month Of "'+this.props.month+'"',
+              fontSize:25
+            },
+            legend:{
+              display:this.props.displayLegend,
+              position:this.props.legendPosition,
+                  labels:{
+                      fontSize: 13
+                  }
+            },
+            tooltips: {
+              callbacks: {
+                title: function(item, data) {
+                  return data['labels'][item[0]['index']];
+                },
+                label: function(item, data) {
+                  return 'RM '+data['datasets'][0]['data'][item['index']];
+                },
+                afterLabel: function(item, data) {
+                  var dataset = data['datasets'][0];
+                  var percent = Math.round((dataset['data'][item['index']] / dataset["_meta"][0]['total']) * 100)
+                  return percent + '%';
+                }
+              },
+              backgroundColor: '#FFF',
+              tooltipTextAlign: 'center',
+              titleFontSize: 16,
+              titleFontColor: '#007bff',
+              bodyFontColor: '#000000',
+              bodyFontStyle: 'bold',
+              titleFontStyle: 'bolder',
+              bodyFontSize: 14,
+              displayColors: false,
+              xAlign: 'center',
+              yAlign: 'bottom'
+            }
+          }}
+               
+        />
+            </div>
+       </div>
+            
         )
     }
 }
 
 
-export default Note;
+export default Reports;

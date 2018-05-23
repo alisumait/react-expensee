@@ -41,17 +41,22 @@ a {
     cursor: pointer;
 }
 
+#root{height: 100%;}
+
 html {
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 body {
-    font-family: 'Averta';
     height: 100%;
     width: 100% !important;
     overflow-x: hidden;
     background-color: #fcfcf5;
+}
 
+*{
+    font-family: 'Averta' !important;
 }
 
 .dropdown menu {

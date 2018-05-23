@@ -1,0 +1,36 @@
+#Reports{
+height: 100%;}
+
+#Reports .chart{
+    float: right;
+    width: 50% !important;
+    margin-top: 30px;
+}
+
+#Reports canvas{
+    height: 600px !important;
+}
+
+#Reports input,
+#Reports select{
+    border: solid 1px orange;
+    vertical-align: top;
+    height: 40px;
+    font-size: 16px;
+    margin: 3px;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+}
+
+#Reports .selectors,
+#Reports .selectors h4, 
+#Reports .ex{
+    text-align: center !important;
+    margin: auto;
+    margin-top: 10px;
+}
+
+#Reports .ex{
+    margin-top: 20px;
+}

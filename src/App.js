@@ -24,23 +24,34 @@ class App extends Component {
     this.addGoal = this.addGoal.bind(this);
     this.removeNote = this.removeNote.bind(this);
     this.removeGoal = this.removeGoal.bind(this);
+    this.getChart = this.getChart.bind(this);
 
- // We're going to setup the React state of our component
+this.monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+ // Setup the React state of the component
     this.state = {
         notes: [],
         prices: [],
         cats: [],
         goals: [],
-        currentItem: '',
+        month: 0,
         userData: '',
         userId: null,
         loading: true,
         amount: 0,
         startAmount: 0,
+        foodPrice: 0,
+        transportationPrice: 0,
+        utilitiesPrice: 0,
+        stationaryPrice: 0,
+        otherPrice: 0,
     }
       
       this.database = database;
   }
+    
+    
     
     
     getUser(userId){
@@ -107,6 +118,43 @@ class App extends Component {
     window.location.reload(); 
   }
     
+    getChart(month){
+    console.log(month);
+    this.setState({
+        month: month,
+    })
+     
+    this.state.foodPrice= 0;
+        this.state.transportationPrice= 0;
+        this.state.utilitiesPrice= 0;
+        this.state.stationaryPrice= 0;
+        this.state.otherPrice = 0;
+    var user = this.state.userId;
+    var expenses = this.database.ref("expenses").child(user);
+    var that = this;
+    expenses.on('value', function(snap){
+       
+        snap.forEach(function(childsnap) {
+        if(childsnap.val().month == month){
+            if(childsnap.val().category == 'Food'){
+                that.state.foodPrice += (childsnap.val().price);
+            }
+            else if(childsnap.val().category == 'Transportation'){
+                that.state.transportationPrice += (childsnap.val().price);
+              }
+            else if(childsnap.val().category == 'Utilities'){
+                that.state.utilitiesPrice += (childsnap.val().price);
+              }
+            else if(childsnap.val().category == 'Stationary'){
+                that.state.stationaryPrice += (childsnap.val().price);
+              }
+            else if(childsnap.val().category == 'Other'){
+                that.state.otherPrice += (childsnap.val().price);
+              }     
+        }});
+    });
+}
+    
   splitTime(numberOfDays){
     var Year= Math.floor(numberOfDays/365);
     var Days = (numberOfDays%365);
@@ -118,14 +166,12 @@ class App extends Component {
         firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         this.setState({ loading: false, userId: user.uid, userData: user });
-          
         var useracc = that.state.userId;
         const previousNotes = that.state.notes;
         const previousPrices = that.state.prices;
         const previousCats = that.state.cats;
         const previousGoals = that.state.goals;
-
-       
+          
         var editamount = that.database.ref("users").child(useracc);
         editamount.child('amount').on('value', function(snap){
         that.setState({
@@ -150,13 +196,13 @@ class App extends Component {
         id: snap.key,
         category: snap.val().category,
       });
-        
       that.setState({
         notes: previousNotes,
         prices: previousPrices,
         cats: previousCats,
       })
-    }  );
+        
+    });
           
  
 
@@ -217,24 +263,18 @@ class App extends Component {
         else {
         this.setState({ loading: false, userId: null });
       }
-    });
-        
+    });        
     }
-  
-     
     
   render() {
       
+
     return (
         <Router>
         <Switch>
+        
        <Route exact strict path="/" render={
             ()=> {
-        if(this.state.userId != null){
-            return(
-            <Redirect to="/mainpage"/>
-            )
-        }
             var getUser  =   this.getUser;
                 return(
                     <body>
@@ -376,7 +416,7 @@ null)
     
 if(noty) {
             noteState = (
-            <h1 style={{textAlign: 'center', color: '#00c4ff', marginRight: '33px', fontWeight: '300'}}>You didn't spend anything on this day.</h1>
+            <h1 style={{textAlign: 'center', color: '#00c4ff', marginRight: '33px', fontWeight: '300'}}>You have no expenses this today. Yet!</h1>
             )
         }
 
@@ -466,18 +506,33 @@ null)
                 )
             }
         } />
+    var month = (new Date().getMonth() + 1);
+month = new Date().to
 
 <Route exact path="/reports" render={
             ()=> {
-    
+    var getUser = this.getUser;
                 return(
-                    <div>
-                    <Reports cats = {[this.state.cats]} userid = {this.state.userId}/>
-                    </div>
+    <div>
+    <Header profileimg = {this.state.userData.photoURL} getUser = {getUser.bind(this)}/>
+
+    <Reports 
+    foodPrice={this.state.foodPrice} 
+    transportationPrice={this.state.transportationPrice} 
+    utilitiesPrice={this.state.utilitiesPrice} 
+    stationaryPrice={this.state.stationaryPrice} 
+    otherPrice={this.state.otherPrice} 
+    month = {this.monthNames[this.state.month-1]}
+    legendPosition="bottom"
+    expenses = {this.state.notes}
+    prices = {this.state.prices}
+    cats = {this.state.cats}
+    getChart = {this.getChart}/>
+        
+                        </div>
                 )
             }
         } />
-
 <Route render={
             ()=> {
                 return(

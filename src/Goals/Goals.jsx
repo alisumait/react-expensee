@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './Goals.css';
 import Goal from "../assets/img/goal.png";
-import Header from "../Header/Header.jsx";
 import DatePicker from 'react-datepicker';
 import moment from 'moment';
 import 'react-datepicker/dist/react-datepicker.css';
