@@ -11,6 +11,11 @@ import NoteForm from './NoteForm/NoteForm.jsx';
 import Reports from './Reports/Reports.jsx';
 import Goals from './Goals/Goals.jsx';
 import Carousel from './GoalSlider/Carousel.jsx';
+import Contact from './Pages/Contact/Contact.jsx';
+import How from './Pages/How/How.jsx';
+import Team from './Pages/Team/Team.jsx';
+import IndexHeader from './IndexHeader/IndexHeader.jsx'
+import Footer from './Footer/Footer.jsx'
 import './assets/css/style.css';
 import Typed from 'react-typed'
 
@@ -277,11 +282,13 @@ this.monthNames = ["January", "February", "March", "April", "May", "June",
             ()=> {
             var getUser  =   this.getUser;
                 return(
-                    <body>
+                    <div>
                         <div className="container-fluid">
-                        <Index getUser = {getUser.bind(this)}/>
+                    <IndexHeader getUser = {getUser.bind(this)}/>
+                        <Index />
+                    <Footer />
                         </div>
-                    </body>
+                    </div>
                 )
             }
         } />
@@ -533,6 +540,54 @@ month = new Date().to
                 )
             }
         } />
+
+<Route exact path="/contact" render={
+            ()=> {
+    var getUser = this.getUser;
+                return(
+    <body id="cont">
+    <div className="container-fluid">
+    <IndexHeader getUser = {getUser.bind(this)}/>
+    <Contact />
+    <Footer />
+        </div>
+</body>
+                )
+            }
+        } />
+
+
+<Route exact path="/how" render={
+            ()=> {
+    var getUser = this.getUser;
+                return(
+    <body>
+    <div className="container-fluid">
+    <IndexHeader getUser = {getUser.bind(this)}/>
+    <How />
+    <Footer />
+        </div>
+</body>
+                )
+            }
+        } />
+
+<Route exact path="/team" render={
+            ()=> {
+    var getUser = this.getUser;
+                return(
+    <body id="Team">
+    <div className="container-fluid">
+    <IndexHeader getUser = {getUser.bind(this)}/>
+    <Team />
+    <Footer />
+        </div>
+</body>
+                )
+            }
+        } />
+
+
 <Route render={
             ()=> {
                 return(

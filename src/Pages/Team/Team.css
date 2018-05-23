@@ -1,0 +1,135 @@
+#Team .img {
+    margin-top: 15px !important;
+    height: 530px !important;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    object-fit: cover;
+}
+
+#Team .carousel {
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+#Team .carousel > h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    font-weight: 300;
+    width: 100%;
+}
+
+#Team h2 {
+    font-size: 45px;
+    font-weight: normal;
+    margin-bottom: 15px;
+    padding-bottom: 30px;
+    text-align: center;
+    margin: auto;
+    color: orange;
+}
+
+#Team h5 {
+    color: #494949;
+}
+
+#Team .mission {
+    margin-top: 55px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 300;
+    color: dimgray;
+}
+
+#Team .card {
+    display: inline-block;
+    margin: 11px;
+}
+
+#Team .team {
+    text-align: center;
+}
+
+#Team .card-img-top {
+    padding: 0 !important;
+    margin: auto;
+    margin-top: 15px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: flex;
+}
+
+
+@media screen and (max-width: 1080px) {
+
+    #Team .img {
+        height: auto !important;
+    }
+   #Team .carousel > h1 {
+        font-size: 45px !important;
+    }
+    #Team h2 {
+        font-size: 35px !important;
+    }
+    #Team .mission {
+        font-size: 22px !important;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #Team .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+        background: ivory !important;
+    }
+    #Team .dot {
+        color: orange;
+    }
+    #Team .sign {
+        color: black !important;
+    }
+    #Team h2 {
+        font-size: 33px !important;
+    }
+    #Team .mission {
+        font-size: 21px !important;
+    }
+
+}
+
+@media screen and (max-width: 720px) {
+
+   #Team .carousel > h1 {
+        font-size: 35px !important;
+    }
+    #Team h2 {
+        font-size: 30px !important;
+    }
+    #Team .mission {
+        font-size: 18px !important;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    #Team .carousel > h1 {
+        font-size: 30px !important;
+    }
+    #Team h2 {
+        font-size: 25px !important;
+    }
+    #Team .mission {
+        font-size: 16px !important;
+    }
+
+}

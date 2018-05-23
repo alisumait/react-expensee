@@ -55,7 +55,7 @@ body {
     background-color: #fcfcf5;
 }
 
-*{
+*:not(.fa){
     font-family: 'Averta' !important;
 }
 
@@ -209,6 +209,7 @@ a > img {
     position: relative;
     vertical-align: text-bottom;
     animation: jump 1.5s infinite;
+    font-family: 'FontAwesome';
 }
 
 .circle {
