@@ -14,6 +14,7 @@ import Carousel from './GoalSlider/Carousel.jsx';
 import Contact from './Pages/Contact/Contact.jsx';
 import How from './Pages/How/How.jsx';
 import Team from './Pages/Team/Team.jsx';
+import Profile from './Profile/Profile.jsx';
 import IndexHeader from './IndexHeader/IndexHeader.jsx'
 import Footer from './Footer/Footer.jsx'
 import './assets/css/style.css';
@@ -484,6 +485,14 @@ null)
             
             
                 return(
+                    
+                    this.state.loading ?
+                    //MAINPAGE
+                    <Redirect to="/"></Redirect>
+                    //.....
+            :
+null,
+                    this.state.userId ?
                     <div>
                     <Header profileimg = {this.state.userData.photoURL} getUser = {this.getUser.bind(this)}/>
                     <Goals addGoal={this.addGoal}/>
@@ -510,6 +519,9 @@ null)
 </div>                    
 
                     </div>
+
+:
+null
                 )
             }
         } />
@@ -520,7 +532,14 @@ month = new Date().to
             ()=> {
     var getUser = this.getUser;
                 return(
-    <div>
+    this.state.loading ?
+                    //MAINPAGE
+                    <Redirect to="/"></Redirect>
+                    //.....
+            :
+null,
+                    this.state.userId ?
+                    <div>
     <Header profileimg = {this.state.userData.photoURL} getUser = {getUser.bind(this)}/>
 
     <Reports 
@@ -535,8 +554,10 @@ month = new Date().to
     prices = {this.state.prices}
     cats = {this.state.cats}
     getChart = {this.getChart}/>
-        
                         </div>
+
+:
+null
                 )
             }
         } />
@@ -583,6 +604,30 @@ month = new Date().to
     <Footer />
         </div>
 </body>
+                )
+            }
+        } />
+
+<Route exact path="/profile" render={
+            ()=> {
+    console.log(this.state.userData);
+    var getUser = this.getUser;
+                return(
+    this.state.loading ?
+                    //MAINPAGE
+                    <Redirect to="/"></Redirect>
+                    //.....
+            :
+null,
+                    this.state.userId ?
+                    <body id="Profile">
+    <div className="container-fluid">
+    <Header getUser = {getUser.bind(this)} profileimg = {this.state.userData.photoURL}/>
+    <Profile profileimg = {this.state.userData.photoURL} user = {this.state.userData} email = {this.state.userData.email}/>
+        </div>
+</body>
+:
+null
                 )
             }
         } />
