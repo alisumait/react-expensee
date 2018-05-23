@@ -230,7 +230,7 @@ class App extends Component {
         <Switch>
        <Route exact strict path="/" render={
             ()=> {
-        if(this.state.loading == false){
+        if(this.state.userId != null){
             return(
             <Redirect to="/mainpage"/>
             )
@@ -474,6 +474,19 @@ null)
                     <div>
                     <Reports cats = {[this.state.cats]} userid = {this.state.userId}/>
                     </div>
+                )
+            }
+        } />
+
+<Route render={
+            ()=> {
+                return(
+                        <div className="container-fluid">
+                    <h1 style={{position: 'relative', top: '50%', transform: 'translateY(-50%)', textAlign: 'center'}}>Sorry, this page is unavailable!
+                        <br></br>
+                        <Link to="/" >Go back</Link>
+                        </h1>
+                        </div>
                 )
             }
         } />
