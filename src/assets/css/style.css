@@ -25,6 +25,11 @@
     font-style: normal;
 }
 
+.switch-wrapper {
+  position: relative;
+}
+ 
+
 @keyframes jump {
     0% {
         top: -8px;

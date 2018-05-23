@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import firebase, {auth, database} from './firebase.js';
 import { Link, NavLink, Redirect, Prompt} from 'react-router-dom';
-import { Route, Switch } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Index from './Index/Index.jsx'
-import Header from './Header/Header.jsx'
-import Home from './Home/Home.jsx'
+import Fader from 'react-fader';
+import Switch from 'react-router-transition-switch';
+import Index from './Index/Index.jsx';
+import Header from './Header/Header.jsx';
+import Home from './Home/Home.jsx';
 import Note from './Note/Note.jsx';
 import NoteForm from './NoteForm/NoteForm.jsx';
 import Reports from './Reports/Reports.jsx';
@@ -15,10 +17,10 @@ import Contact from './Pages/Contact/Contact.jsx';
 import How from './Pages/How/How.jsx';
 import Team from './Pages/Team/Team.jsx';
 import Profile from './Profile/Profile.jsx';
-import IndexHeader from './IndexHeader/IndexHeader.jsx'
-import Footer from './Footer/Footer.jsx'
+import IndexHeader from './IndexHeader/IndexHeader.jsx';
+import Footer from './Footer/Footer.jsx';
 import './assets/css/style.css';
-import Typed from 'react-typed'
+import Typed from 'react-typed';
 
 
 class App extends Component {
@@ -277,7 +279,7 @@ this.monthNames = ["January", "February", "March", "April", "May", "June",
 
     return (
         <Router>
-        <Switch>
+        <Switch component={Fader}>
         
        <Route exact strict path="/" render={
             ()=> {

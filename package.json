@@ -12,7 +12,9 @@
     "react-csv": "^1.0.14",
     "react-datepicker": "^1.4.1",
     "react-dom": "^16.3.1",
+    "react-fader": "^2.0.3",
     "react-router-dom": "^4.2.2",
+    "react-router-transition-switch": "^1.1.0",
     "react-scripts": "1.1.4",
     "react-typed": "^1.0.8"
   },
