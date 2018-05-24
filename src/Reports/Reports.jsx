@@ -167,6 +167,7 @@ componentWillReceiveProps(nextProps) {
                   return 'RM '+data['datasets'][0]['data'][item['index']];
                 },
                 afterLabel: function(item, data) {
+                    //calc total
                   var dataset = data['datasets'][0];
                     var total = 0;
             total += that.state.foodPrice;
