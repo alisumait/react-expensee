@@ -1,3 +1,6 @@
+/////////Check it,Every time I run npm start,it directly go to the main page
+
+
 import React, { Component } from 'react';
 import {
     Link,
@@ -81,3 +84,5 @@ items.forEach(item => item.addEventListener('click', this.toggleAccordion));
     }
 
 export default Faq;
+
+
