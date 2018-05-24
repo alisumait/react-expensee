@@ -32,7 +32,7 @@ componentWillReceiveProps(nextProps) {
       utilitiesPrice: nextProps.utilitiesPrice,
       stationaryPrice: nextProps.stationaryPrice,
       otherPrice: nextProps.otherPrice,
-  });  
+  });
 }
 
     static defaultProps = {
@@ -60,20 +60,16 @@ componentWillReceiveProps(nextProps) {
 
     render(){ 
     var csvData = [];
+        csvData.push(
+            ["Expense", "Category", "Price","Date"]
+            );
       var that = this;
       this.props.expenses.map((name, index) => {
-          console.log(name.expense);
-        if(index == 0){
-            csvData.push(
-            ["Expense", "Category", "Price","Date"]
-            )
-          }
-          else
           csvData.push(
-    
             [name.expense, that.props.cats[index].category ,that.props.prices[index].price, name.day+'/'+name.month]
       )
       });
+        console.log(csvData);
       this.state.csvData = csvData;
         
         defaults.global.defaultFontFamily = 'Averta'
@@ -172,7 +168,13 @@ componentWillReceiveProps(nextProps) {
                 },
                 afterLabel: function(item, data) {
                   var dataset = data['datasets'][0];
-                  var percent = Math.round((dataset['data'][item['index']] / dataset["_meta"][0]['total']) * 100)
+                    var total = 0;
+            total += that.state.foodPrice;
+            total += that.state.transportationPrice;
+            total += that.state.utilitiesPrice;
+            total += that.state.stationaryPrice;
+            total += that.state.otherPrice;
+                  var percent = Math.round((dataset['data'][item['index']] / total) * 100);
                   return percent + '%';
                 }
               },
