@@ -16,8 +16,6 @@ class Faq extends Component {
         
     }
 
-    
-    
         render() {
             
             

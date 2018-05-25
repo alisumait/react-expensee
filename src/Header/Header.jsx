@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import firebase, {auth, facebookProvider, googleProvider, twitterProvider} from '../firebase.js';
 import {
     Link,
-    NavLink,
-    Redirect,
-    Prompt
+    Redirect
 } from 'react-router-dom';
 import Route from 'react-router-dom/Route';
 import '../assets/css/style.css';
@@ -49,7 +47,7 @@ class Header extends Component {
                         <div className="collapse navbar-collapse" id="navbarNavDropdown">
                             <ul className="navbar-nav">
                                 <li className="nav-item active">
-                                    <Link className="nav-link text" to="/mainpage">Expenses <span className="sr-only">(current)</span></Link>
+                                    <Link className="nav-link text" to="/mainpage">Expense <span className="sr-only">(current)</span></Link>
                                 </li>
                                 <li className="nav-item active">
                                     <Link className="nav-link text" to="/goals">Goals</Link>

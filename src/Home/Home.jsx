@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
 import firebase, {auth, database} from '../firebase.js';
-import {
-    Link,
-    NavLink,
-    Redirect,
-    Prompt
-} from 'react-router-dom';
 import Route from 'react-router-dom/Route';
 import '../assets/css/style.css';
 import Profile from '../assets/img/profile.png';

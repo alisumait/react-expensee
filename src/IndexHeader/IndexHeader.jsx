@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import firebase, {auth, facebookProvider, googleProvider, twitterProvider} from '../firebase.js';
 import {
     Link,
-    NavLink,
-    Redirect,
-    Prompt
+    Redirect
 } from 'react-router-dom';
 import '../assets/css/style.css';
 

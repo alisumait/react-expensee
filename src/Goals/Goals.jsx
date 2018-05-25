@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import './Goals.css';
 import Goal from "../assets/img/goal.png";
-import DatePicker from 'react-datepicker';
-import moment from 'moment';
-import 'react-datepicker/dist/react-datepicker.css';
 
 class Goals extends Component{
     constructor(props){
@@ -12,7 +9,6 @@ class Goals extends Component{
         this.displayblocks = this.displayblocks.bind(this);
         this.displayblockw = this.displayblockw.bind(this);
         this.handleClickOutside = this.handleClickOutside.bind(this);
-        this.handleDate = this.handleDate.bind(this);
         this.handleGoal = this.handleGoal.bind(this);
         this.handleCost = this.handleCost.bind(this);
         this.handlePercentage = this.handlePercentage.bind(this);
@@ -22,7 +18,6 @@ class Goals extends Component{
         this.state = {
             displaysignin: false,
             displaysignup: false,
-            startDate: moment(),
             newGoalName: '',
             newGoalPrice: '',
             newGoalPercentage: '',
@@ -30,11 +25,6 @@ class Goals extends Component{
     }
     }
     
-    handleDate(date) {
-    this.setState({
-      startDate: date
-    });
-  }
     
     componentDidMount() {
         document.addEventListener('mousedown', this.handleClickOutside);
@@ -98,8 +88,6 @@ class Goals extends Component{
     }
     
   writeNote(){
-      var d = new Date(this.state.startDate);
-      var t = new Date();
         if(this.state.newGoalName == '' || this.state.newGoalPrice <= 0 || this.state.newGoalPercentage <= 0 || this.state.newGoalSpending <= 0){
             if(this.state.newExpenseName == '')
                 alert("Please type your goal");

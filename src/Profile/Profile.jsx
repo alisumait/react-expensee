@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import firebase, {auth, database} from '../firebase.js';
-import {
-    Link,
-    Redirect
-} from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import './Profile.css';
 import Profile from '../assets/img/profile.png';
 

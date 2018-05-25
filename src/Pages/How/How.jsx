@@ -1,10 +1,4 @@
 import React, { Component } from 'react';
-import {
-    Link,
-    NavLink,
-    Redirect,
-    Prompt
-} from 'react-router-dom';
 import './How.css';
 
 class How extends Component {

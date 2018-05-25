@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Team.css';
-import Typed from 'react-typed'
 import Ali from '../../assets/img/ali.jpg';
 import Mahin from '../../assets/img/mahin.jpg';
 import Ovro from '../../assets/img/ovro.jpg';

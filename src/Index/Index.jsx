@@ -1,10 +1,4 @@
 import React, { Component } from 'react';
-import {
-    Link,
-    NavLink,
-    Redirect,
-    Prompt
-} from 'react-router-dom';
 import '../assets/css/style.css';
 import Typed from 'react-typed'
 import calculator from '../assets/img/icons/calculator.png';

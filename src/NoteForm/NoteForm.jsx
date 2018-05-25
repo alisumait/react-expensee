@@ -4,10 +4,7 @@ import DatePicker from 'react-datepicker';
 import moment from 'moment';
 import 'react-datepicker/dist/react-datepicker.css';
 import {
-    Link,
-    NavLink,
-    Redirect,
-    Prompt
+    Redirect
 } from 'react-router-dom';
 
 class NoteForm extends Component{

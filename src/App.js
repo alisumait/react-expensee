@@ -382,7 +382,8 @@ null,
                     </div>
 
 :
-null)
+                    <Redirect to="/"></Redirect>
+)
             }
         } />
 
@@ -448,7 +449,8 @@ null,
                     </div>
 
 :
-null)
+                    <Redirect to="/"></Redirect>
+)
             }
         } />
 
@@ -524,7 +526,7 @@ null,
                     </div>
 
 :
-null
+                    <Redirect to="/"></Redirect>
                 )
             }
         } />
@@ -560,7 +562,7 @@ null,
                         </div>
 
 :
-null
+                    <Redirect to="/"></Redirect>
                 )
             }
         } />
@@ -645,11 +647,13 @@ null,
         </div>
 </body>
 :
-null
+<Redirect to="/"></Redirect>
                 )
             }
         } />
 
+
+// Route for unidentified pages is below
 
 <Route render={
             ()=> {

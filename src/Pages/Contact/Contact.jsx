@@ -1,11 +1,4 @@
 import React, { Component } from 'react';
-import firebase, {auth, facebookProvider, googleProvider, twitterProvider} from '../../firebase.js';
-import {
-    Link,
-    NavLink,
-    Redirect,
-    Prompt
-} from 'react-router-dom';
 import './contact.css';
 
 class How extends Component {
