@@ -336,6 +336,7 @@ this.monthNames = ["January", "February", "March", "April", "May", "June",
             ()=> {
             
                 let noteState;
+            let logged;
             var d = new Date();
             var noty = true;
             if(this.state.notes.length > 0){
@@ -366,6 +367,22 @@ this.monthNames = ["January", "February", "March", "April", "May", "June",
             )
         }
                 var getUser  =   this.getUser;
+
+        if(this.state.userId){
+            logged = (
+            <div>
+                    <Header profileimg = {this.state.userData.photoURL} getUser = {getUser.bind(this)}/>
+                    <Home user = {this.state.userId} startAmount = {this.state.startAmount} amount = {this.state.amount}/>
+                    { noteState }
+                    <NoteForm addNote={this.addNote}/>
+                    </div>
+            )
+        }
+        else{
+            logged = {
+                <Redirect to="/"></Redirect>
+            }
+        }
                 return(
                     this.state.loading ?
                     //MAINPAGE
@@ -373,16 +390,7 @@ this.monthNames = ["January", "February", "March", "April", "May", "June",
                     //.....
             :
 null,
-                    this.state.userId ?
-                    <div>
-                    <Header profileimg = {this.state.userData.photoURL} getUser = {getUser.bind(this)}/>
-                    <Home user = {this.state.userId} startAmount = {this.state.startAmount} amount = {this.state.amount}/>
-                    { noteState }
-                    <NoteForm addNote={this.addNote}/>
-                    </div>
-
-:
-                    <Redirect to="/"></Redirect>
+               { logged }
 )
             }
         } />
