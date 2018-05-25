@@ -16,6 +16,7 @@ import Carousel from './GoalSlider/Carousel.jsx';
 import Contact from './Pages/Contact/Contact.jsx';
 import How from './Pages/How/How.jsx';
 import Team from './Pages/Team/Team.jsx';
+import Faq from './Pages/Faq/Faq.jsx';
 import Profile from './Profile/Profile.jsx';
 import IndexHeader from './IndexHeader/IndexHeader.jsx';
 import Footer from './Footer/Footer.jsx';
@@ -603,6 +604,21 @@ null
     <div className="container-fluid">
     <IndexHeader getUser = {getUser.bind(this)}/>
     <Team />
+    <Footer />
+        </div>
+</body>
+                )
+            }
+        } />
+
+<Route exact path="/faq" render={
+            ()=> {
+    var getUser = this.getUser;
+                return(
+    <body>
+    <div className="container-fluid">
+    <IndexHeader getUser = {getUser.bind(this)}/>
+    <Faq />
     <Footer />
         </div>
 </body>
