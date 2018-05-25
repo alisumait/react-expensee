@@ -171,6 +171,7 @@ this.monthNames = ["January", "February", "March", "April", "May", "June",
 }
     
     componentWillMount(){
+    this.setState({ loading: false });
         var that = this;
         firebase.auth().onAuthStateChanged((user) => {
       if (user) {
@@ -270,7 +271,7 @@ this.monthNames = ["January", "February", "March", "April", "May", "June",
     })
         }
         else {
-        this.setState({ loading: false, userId: null });
+        this.setState({ loading: true, userId: null });
       }
     });        
     }
@@ -336,7 +337,6 @@ this.monthNames = ["January", "February", "March", "April", "May", "June",
             ()=> {
             
                 let noteState;
-            let logged;
             var d = new Date();
             var noty = true;
             if(this.state.notes.length > 0){
@@ -367,30 +367,18 @@ this.monthNames = ["January", "February", "March", "April", "May", "June",
             )
         }
                 var getUser  =   this.getUser;
-
-        if(this.state.userId){
-            logged = (
-            <div>
-                    <Header profileimg = {this.state.userData.photoURL} getUser = {getUser.bind(this)}/>
-                    <Home user = {this.state.userId} startAmount = {this.state.startAmount} amount = {this.state.amount}/>
-                    { noteState }
-                    <NoteForm addNote={this.addNote}/>
-                    </div>
-            )
-        }
-        else{
-            logged = {
-                <Redirect to="/"></Redirect>
-            }
-        }
                 return(
                     this.state.loading ?
                     //MAINPAGE
                     <Redirect to="/"></Redirect>
                     //.....
             :
-null,
-               { logged }
+                    <div>
+                    <Header profileimg = {this.state.userData.photoURL} getUser = {getUser.bind(this)}/>
+                    <Home user = {this.state.userId} startAmount = {this.state.startAmount} amount = {this.state.amount}/>
+                    { noteState }
+                    <NoteForm addNote={this.addNote}/>
+                    </div>
 )
             }
         } />
@@ -447,17 +435,12 @@ if(noty) {
                     <Redirect to="/"></Redirect>
                     //.....
             :
-null,
-                    this.state.userId ?
                     <div>
                     <Header profileimg = {this.state.userData.photoURL} getUser = {getUser.bind(this)}/>
                     <Home user = {this.state.userId} startAmount = {this.state.startAmount} amount = {this.state.amount}/>
                     { noteState }
                     { adder }
                     </div>
-
-:
-                    <Redirect to="/"></Redirect>
 )
             }
         } />
@@ -504,8 +487,6 @@ null,
                     <Redirect to="/"></Redirect>
                     //.....
             :
-null,
-                    this.state.userId ?
                     <div>
                     <Header profileimg = {this.state.userData.photoURL} getUser = {this.getUser.bind(this)}/>
                     <Goals addGoal={this.addGoal}/>
@@ -532,9 +513,6 @@ null,
 </div>                    
 
                     </div>
-
-:
-                    <Redirect to="/"></Redirect>
                 )
             }
         } />
@@ -550,8 +528,6 @@ month = new Date().to
                     <Redirect to="/"></Redirect>
                     //.....
             :
-null,
-                    this.state.userId ?
                     <div>
     <Header profileimg = {this.state.userData.photoURL} getUser = {getUser.bind(this)}/>
 
@@ -568,9 +544,6 @@ null,
     cats = {this.state.cats}
     getChart = {this.getChart}/>
                         </div>
-
-:
-                    <Redirect to="/"></Redirect>
                 )
             }
         } />
@@ -646,24 +619,17 @@ null,
                     <Redirect to="/"></Redirect>
                     //.....
             :
-null,
-                    this.state.userId ?
                     <body id="Profile">
     <div className="container-fluid">
     <Header getUser = {getUser.bind(this)} profileimg = {this.state.userData.photoURL}/>
     <Profile profileimg = {this.state.userData.photoURL} user = {this.state.userData} email = {this.state.userData.email}/>
         </div>
 </body>
-:
-<Redirect to="/"></Redirect>
                 )
             }
         } />
 
-
-// Route for unidentified pages is below
-
-<Route render={
+<Route path = "*" render={
             ()=> {
                 return(
                         <div className="container-fluid">

@@ -25,6 +25,11 @@
     font-style: normal;
 }
 
+#root > div,
+#root > div > div{
+    height: 100% !important;
+}
+
 .switch-wrapper {
   position: relative;
 }
