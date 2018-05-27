@@ -121,6 +121,8 @@ class IndexHeader extends Component {
                         user: user.email,
                         amount: 0
                     });
+                        getUser(user.uid);
+                    that.setState({ logged: true });
                     }
                 })
             });
@@ -144,6 +146,8 @@ class IndexHeader extends Component {
                         user: user.email,
                         amount: 0
                     });
+                        getUser(user.uid);
+                    that.setState({ logged: true });
                     }
                 })
             });
@@ -166,6 +170,8 @@ class IndexHeader extends Component {
                         user: user.email,
                         amount: 0
                     });
+                        getUser(user.uid);
+                    that.setState({ logged: true });
                     }
                 })
             });
