@@ -1,12 +1,9 @@
 import firebase from 'firebase';
 
 const config = {
-    apiKey: "AIzaSyBZ0iMv0Hx9pGRLonPfJ3c4DAKZIBLoiZk",
-    authDomain: "expensee-1bf50.firebaseapp.com",
-    databaseURL: "https://expensee-1bf50.firebaseio.com",
-    projectId: "expensee-1bf50",
-    storageBucket: "expensee-1bf50.appspot.com",
-    messagingSenderId: "111814420112"
+    
+    // Firebase API Keys
+    
   };
 
 firebase.initializeApp(config);
